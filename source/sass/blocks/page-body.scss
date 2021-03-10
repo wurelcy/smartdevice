@@ -1,0 +1,8 @@
+.page-body {
+  height: 100%;
+  margin: 0;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  font-family: "Roboto Condensed", "Roboto", sans-serif;
+}
