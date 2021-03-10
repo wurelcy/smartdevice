@@ -1,0 +1,13 @@
+.footer {
+    position: relative;
+    overflow-x: hidden;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 65px;
+    color: $darkest;
+  }
+}

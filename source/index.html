@@ -215,8 +215,11 @@
           </ul>
         </section>
         <section class="site-nav">
-          <h2>Разделы сайта</h2>
-          <ul class="site-nav__list">
+          <div class="site-nav__wrapper">
+            <h2>Разделы сайта</h2>
+            <button class="site-nav__button" type="button" aria-label="Раскрыть список"></button>
+          </div>
+          <ul class="site-nav__list site-nav__list--closed">
             <li class="site-nav__item">
               <a class="site-nav__link" href="#">О компании</a>
             </li>
@@ -239,11 +242,13 @@
               <a class="site-nav__link" href="#">Контакты</a>
             </li>
           </ul>
-          <button class="site-nav__button" type="button" aria-label="Раскрыть список"></button>
         </section>
         <section class="contacts">
-          <h2>Наш офис</h2>
-          <ul class="contacts__list">
+          <div class="contacts__wrapper">
+            <h2>Наш офис</h2>
+            <button class="contacts__button" type="button" aria-label="Раскрыть список"></button>
+          </div>
+          <ul class="contacts__list contacts__list--closed">
             <li class="contacts__item">г. Мытищи, Олимпийский проспект, д.10</li>
             <li class="contacts__item">
               <a class="contacts__link" href="tel:+74955894050">+7 (495) 589-40-50</a>
@@ -255,7 +260,6 @@
               <a class="contacts__link" href="tel:+792692608079">+7 (926) 926-080-79</a>
             </li>
           </ul>
-          <button class="contacts__button" type="button" aria-label="Раскрыть список"></button>
         </section>
         <section class="copyright">
           <h2 class="visually-hidden">Копирайт</h2>
