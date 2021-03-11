@@ -618,7 +618,8 @@ header {
   padding-left: 44px;
   padding-right: 42px;
   min-height: 299px;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  cursor: pointer; }
   .advantages__item:nth-child(2n + 1), .advantages__item:first-child {
     margin-right: 30px; }
   .advantages__item h3 {
@@ -778,6 +779,121 @@ header {
       left: 135px; }
   .about__link {
     margin-top: 37px; } }
+
+.services {
+  background-color: #1b2d37;
+  padding-top: 93px;
+  padding-bottom: 127px;
+  color: #ffffff; }
+  .services .container {
+    max-width: 1170px; }
+  .services p {
+    margin: 0;
+    margin-bottom: 47px;
+    padding: 0;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 51px; }
+
+.services__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px; }
+
+.services__item {
+  min-height: 620px;
+  background: url("../img/manifacturing@1x.png");
+  background-repeat: no-repeat; }
+  .services__item h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 162px; }
+  .services__item:nth-child(3n-1) {
+    background: url("../img/installation@1x.png");
+    background-repeat: no-repeat; }
+  .services__item:nth-child(3n) {
+    background: url("../img/lighting@1x.png");
+    background-repeat: no-repeat; }
+
+.services__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 53px;
+  padding-left: 43px;
+  min-width: 100%;
+  min-height: 100%; }
+
+.services__button {
+  width: 63px;
+  height: 63px;
+  background-color: #00b2ff;
+  margin-left: auto;
+  position: relative; }
+  .services__button::before {
+    content: "";
+    position: absolute;
+    height: 8px;
+    width: 4px;
+    background-image: url("../img/icon-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+@media (max-width: 1023px) {
+  .services {
+    padding-top: 53px;
+    padding-bottom: 78px; }
+    .services .container {
+      max-width: 715px; }
+    .services p {
+      margin-bottom: 46px;
+      font-size: 32px;
+      line-height: 45px; }
+  .services__list {
+    display: flex;
+    flex-direction: column;
+    gap: 46px;
+    justify-content: center; }
+  .services__item {
+    min-height: 256px;
+    background: url("../img/manifacturing-tablet@1x.png");
+    background-repeat: no-repeat; }
+    .services__item:nth-child(3n-1) {
+      background: url("../img/installation@1x.png");
+      background-size: cover;
+      background-position: 0px; }
+    .services__item:nth-child(3n) {
+      background: url("../img/lighting@1x.png");
+      background-size: cover;
+      background-position: 0px; }
+  .services__link {
+    padding-top: 43px;
+    min-height: 256px; } }
+
+@media (max-width: 767px) {
+  .services {
+    padding-bottom: 64px; }
+    .services .container {
+      max-width: 280px; }
+    .services p {
+      margin-bottom: 37px;
+      font-size: 28px;
+      line-height: 39px; }
+  .services__list {
+    gap: 30px; }
+  .services__link {
+    padding-top: 23px;
+    padding-left: 35px;
+    min-height: 256px; } }
 
 .footer {
   position: relative;
