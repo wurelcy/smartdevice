@@ -2,9 +2,9 @@
   color: $darkgrey;
 
   .container {
-    padding-top: 80px;
+    padding-top: 75px;
     padding-bottom: 110px;
-    padding-left: 310px;
+    padding-left: 302px;
     position: relative;
 
     &:before {
@@ -15,8 +15,8 @@
       background-image: url("../img/number.png");
       background-repeat: no-repeat;
       background-position: center;
-      top: 80px;
-      left: 120px;
+      top: 88px;
+      left: 125px;
     }
   }
 
@@ -31,7 +31,8 @@
 
   p {
     margin: 0;
-    margin-top: 18px;
+    margin-top: 21px;
+    max-width: 984px;
     padding: 0;
     font-size: 16px;
     line-height: 22px;
@@ -42,7 +43,7 @@
 .about__link {
   display: block;
   max-width: 180px;
-  margin-top: 44px;
+  margin-top: 38px;
   color: $blue;
   letter-spacing: 0.05em;
   text-align: center;
@@ -64,16 +65,16 @@
 @media (max-width: $tablet-width) {
   .about {
     .container {
-      padding-top: 29px;
+      padding-top: 25px;
       padding-bottom: 83px;
-      padding-left: 189px;
+      padding-left: 185px;
 
       &:before {
         height: 361px;
         width: 177px;
         background-size: cover;
         top: 25px;
-        left: 10px;
+        left: 5px;
       }
     }
 
@@ -87,10 +88,12 @@
     }
 
     p {
-      margin-top: 23px;
+      margin-top: 26px;
+      margin-left: 3px;
 
       &:last-of-type {
         position: relative;
+        margin-top: 20px;
 
         &::before {
           content: "..";
@@ -103,16 +106,18 @@
   }
 
   .about__link {
-    margin-top: 34px;
+    padding: 13px 0;
+    margin-top: 42px;
+    margin-left: 4px;
   }
 }
 
 @media (max-width: $mobile-width-only) {
   .about {
     .container {
-      padding-top: 30px;
+      padding-top: 36px;
       padding-bottom: 65px;
-      padding-left: 0;
+      padding-left: 4px;
 
       &:before {
         display: none;
@@ -125,9 +130,11 @@
     }
 
     p {
-      margin-top: 18px;
+      margin-top: 21px;
 
       &:last-of-type {
+        margin-top: 40px;
+
         &::before {
           bottom: 0;
           left: 135px;
@@ -137,6 +144,6 @@
   }
 
   .about__link {
-    margin-top: 37px;
+    margin-top: 29px;
   }
 }

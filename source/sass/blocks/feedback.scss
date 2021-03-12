@@ -1,11 +1,12 @@
 .feedback {
   background-color: $blue;
-  padding-top: 96px;
+  padding-top: 91px;
   padding-bottom: 113px;
   color: $white;
+  overflow: hidden;
 
   .container {
-    max-width: 1195px;
+    max-width: 1170px;
     position: relative;
 
     &::before {
@@ -13,8 +14,8 @@
       position: absolute;
       width: 511px;
       height: 288px;
-      top: 65px;
-      left: -100px;
+      top: 70px;
+      left: -25px;
       background-image: url("../img/paper-airplane@1x.png");
       background-repeat: no-repeat;
       z-index: 1;
@@ -25,8 +26,8 @@
       position: absolute;
       width: 670px;
       height: 640px;
-      top: -155px;
-      left: -280px;
+      top: -150px;
+      left: -200px;
       background-image: url("../img/triangles.svg");
       background-repeat: no-repeat;
     }
@@ -41,16 +42,18 @@
 
     &:last-of-type {
       font-family: "PT Mono";
+      margin-left: 4px;
       font-weight: normal;
       font-size: 16px;
       line-height: 22px;
-      margin-top: 7px;
+      margin-top: 10px;
     }
   }
 
   form {
-    margin-top: 49px;
+    margin-top: 50px;
     display: flex;
+    margin-left: 4px;
     flex-wrap: wrap;
     justify-content: space-between;
     position: relative;
@@ -58,10 +61,10 @@
     &::before {
       content: "";
       position: absolute;
-      width: 234px;
-      height: 260px;
-      top: -125px;
-      right: -340px;
+      width: 264px;
+      height: 290px;
+      top: -130px;
+      right: -362px;
       opacity: 0.3;
       background-image: url("../img/small-triangle-left.svg");
       background-repeat: no-repeat;
@@ -71,10 +74,10 @@
     &::after {
       content: "";
       position: absolute;
-      width: 373px;
-      height: 375px;
-      top: 40px;
-      right: -400px;
+      width: 473px;
+      height: 400px;
+      top: 90px;
+      right: -495px;
       opacity: 0.3;
       background-image: url("../img/small-triangle-left.svg");
       background-repeat: no-repeat;
@@ -86,7 +89,7 @@
   textarea {
     flex-grow: 1;
     min-height: 154px;
-    margin-bottom: 43px;
+    margin-bottom: 44px;
     border: 0;
     background-color: rgba($white, 0.1);
     padding-left: 16px;
@@ -107,7 +110,7 @@
 .feedback__wrapper {
   margin-left: auto;
   margin-right: 0;
-  max-width: 570px;
+  max-width: 574px;
 }
 
 .feedback__name,
@@ -117,7 +120,7 @@
     min-width: 270px;
     border: 0;
     background-color: rgba($white, 0.1);
-    padding-left: 16px;
+    padding-left: 17px;
     margin-bottom: 40px;
     color: $white;
     font-family: "PT Mono";
@@ -168,7 +171,7 @@
     height: 16px;
     background-color: transparent;
     border: 1px solid $white;
-    left: -36px;
+    left: -32px;
     top: 2px;
   }
 
@@ -185,7 +188,7 @@
       display: none;
       position: absolute;
       content: "";
-      left: -32px;
+      left: -28px;
       top: 7px;
       height: 5px;
       width: 8px;
@@ -206,11 +209,11 @@
 
 @media (max-width: $tablet-width) {
   .feedback {
-    padding-top: 83px;
+    padding-top: 78px;
     padding-bottom: 103px;
 
     .container {
-      max-width: 7500px;
+      max-width: 750px;
 
       &::before,
       &::after {
@@ -221,10 +224,15 @@
     p {
       font-size: 32px;
       line-height: 45px;
+      margin-bottom: 18px;
+
+      &:last-of-type {
+        margin-left: 6px;
+      }
     }
 
     form {
-      margin-top: 50px;
+      margin-top: 55px;
 
       &::before,
       &::after {
@@ -234,18 +242,30 @@
 
     textarea {
       min-height: 159px;
-      margin-bottom: 44px;
+      margin-bottom: 46px;
       padding-left: 17px;
     }
   }
 
   .feedback__wrapper {
     margin-right: auto;
-    max-width: 590px;
+    max-width: 595px;
   }
 
   .feedback__submit {
     min-width: 279px;
+  }
+
+  .feedback__button-block {
+    input {
+      & + label::before {
+      left: -33px;
+    }
+
+      & + label::after {
+        left: -29px;
+      }
+    }
   }
 
   .feedback__name,
@@ -257,12 +277,16 @@
       margin-bottom: 41px;
     }
   }
+
+  .feedback__label {
+    max-width: 238px;
+  }
 }
 
 @media (max-width: $mobile-width-only) {
   .feedback {
-    padding-top: 33px;
-    padding-bottom: 41px;
+    padding-top: 31px;
+    padding-bottom: 42px;
 
     .container {
       max-width: 290px;
@@ -271,15 +295,21 @@
     p {
       font-size: 28px;
       line-height: 39px;
+      margin-bottom: 12px;
+
+      &:last-of-type {
+        margin-left: 0;
+      }
     }
 
     form {
-      margin-top: 31px;
+      margin-top: 26px;
+      margin-left: 0;
     }
 
     textarea {
       min-height: 104px;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
       padding-left: 17px;
     }
   }
@@ -289,7 +319,7 @@
   }
 
   .feedback__submit {
-    min-width: 279px;
+    min-width: 100%;
     margin-bottom: 30px;
   }
 
@@ -301,7 +331,21 @@
     }
   }
 
+  .feedback__label {
+    margin-left: 18px;
+  }
+
   .feedback__button-block {
     flex-direction: column;
+
+    input {
+      & + label::before {
+      left: -34px;
+    }
+
+      & + label::after {
+        left: -30px;
+      }
+    }
   }
 }

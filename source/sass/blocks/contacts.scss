@@ -1,11 +1,14 @@
 .contacts {
+  margin-right: 3px;
+
   h2 {
     margin: 0;
-    margin-bottom: 29px;
+    margin-bottom: 25px;
     font-weight: normal;
     font-size: 15px;
     line-height: 16px;
     text-transform: uppercase;
+    letter-spacing: 0.05em;
   }
 }
 
@@ -32,6 +35,11 @@
 @media (max-width: $tablet-width) {
   .contacts {
     align-self: flex-start;
+    margin-right: 8px;
+  }
+
+  .contacts__list {
+    margin-right: 3px;
   }
 }
 
@@ -40,7 +48,9 @@
     position: relative;
 
     h2 {
-      margin: 29px 0;
+      margin: 27px 0;
+      margin-bottom: 31px;
+      margin-left: 5px;
     }
 
     &::after {
@@ -50,7 +60,7 @@
       height: 1px;
       background-color: rgba($border, 0.2);
       left: -50%;
-      top: 70px;
+      bottom: 0;
     }
   }
 
@@ -59,6 +69,13 @@
     justify-content: space-between;
     align-items: center;
     min-width: 280px;
+  }
+
+  .contacts__list {
+    max-height: 125px;
+    margin-left: 5px;
+    margin-bottom: 30px;
+    max-width: 270px;
   }
 
   .contacts__button {
@@ -74,16 +91,27 @@
       position: absolute;
       width: 16px;
       height: 16px;
-      mask: url("../img/icon-cross.svg");
+      mask: url("../img/icon-plus.svg");
       background-color: $icon;
-      right: 0;
-      top: -10px;
-      transform: rotate(45deg);
+      right: -2px;
+      top: -7px;
     }
   }
 
   .contacts__list--closed {
     display: none;
+  }
+
+  .contacts__wrapper--opened {
+    .contacts__button {
+      &::before {
+        height: 1px;
+        mask: none;
+        background-color: $icon;
+        right: -12px;
+        top: -1px;
+      }
+    }
   }
 
   .contacts__item {

@@ -7,7 +7,23 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding-top: 65px;
+    padding-top: 64px;
     color: $darkest;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .footer {
+    .container {
+      padding-top: 19px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .footer {
+    .container {
+      padding-top: 46px;
+    }
   }
 }

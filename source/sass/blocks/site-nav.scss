@@ -1,10 +1,14 @@
 .site-nav {
+  margin-right: 142px;
+  min-height: 143px;
+
   h2 {
     margin: 0;
-    margin-bottom: 29px;
+    margin-bottom: 24px;
     font-weight: normal;
     font-size: 15px;
     line-height: 16px;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
   }
 }
@@ -22,10 +26,11 @@
   justify-content: space-between;
   opacity: 0.5;
   max-height: 100px;
+  max-width: 516px;
 }
 
 .site-nav__item {
-  margin-right: 65px;
+  margin-right: 74px;
 }
 
 .site-nav__button {
@@ -33,8 +38,19 @@
 }
 
 @media (max-width: $tablet-width) {
+  .site-nav {
+    position: relative;
+    margin-right: 0;
+
+    h2 {
+      margin-left: 2px;
+      margin-bottom: 25px;
+    }
+  }
+
   .site-nav__list {
     max-height: 100%;
+    margin-right: 0;
   }
 
   .site-nav__item {
@@ -45,9 +61,11 @@
 @media (max-width: $mobile-width-only) {
   .site-nav {
     position: relative;
+    min-height: auto;
 
     h2 {
       margin: 29px 0;
+      margin-left: 5px;
     }
 
     &::after {
@@ -57,7 +75,7 @@
       height: 1px;
       background-color: rgba($border, 0.2);
       left: -50%;
-      top: 70px;
+      top: 72px;
     }
   }
 
@@ -74,11 +92,11 @@
       position: absolute;
       width: 16px;
       height: 16px;
-      mask: url("../img/icon-cross.svg");
+      background-position: center;
+      mask: url("../img/icon-plus.svg");
       background-color: $icon;
-      right: 0;
-      top: -10px;
-      transform: rotate(45deg);
+      right: -13px;
+      top: -7px;
     }
   }
 

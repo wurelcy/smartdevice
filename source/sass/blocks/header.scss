@@ -1,10 +1,11 @@
-header {
+.header {
   background: $darkest url("../img/bg@1x.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   color: $white;
   overflow-x: hidden;
+  padding-top: 14px;
 }
 
 .header__wrapper {
@@ -12,7 +13,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-top: 20px;
-  padding-bottom: 231px;
+  padding-bottom: 229px;
   color: $white;
 
   img {
@@ -24,7 +25,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 659px;
+  min-width: 658px;
+  margin-right: 5px;
 }
 
 .header__call-button {
@@ -36,10 +38,12 @@ header {
   text-transform: uppercase;
   background: transparent;
   padding: 14px;
+  min-width: 180px;
   color: $white;
   border: 1px solid $white;
   border-radius: 5px;
   cursor: pointer;
+  margin-left: 38px;
 
   &:focus,
   &:hover {
@@ -60,8 +64,7 @@ header {
   line-height: 18px;
 
   svg {
-    vertical-align: middle;
-    display: inline-block;
+    margin-right: 11px;
   }
 
   &:focus,
@@ -74,13 +77,26 @@ header {
   }
 }
 
+.header__phone-wrapper {
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 6px;
+  }
+}
+
 @media (max-width: $tablet-width) {
+  .header {
+    padding-top: 0;
+  }
+
   .header__wrapper {
     padding-bottom: 116px;
   }
 
   .header__contacts {
     min-width: 83px;
+    margin-right: 0;
 
     &:first-child {
       svg {
@@ -92,6 +108,7 @@ header {
     svg {
       width: 24px;
       height: 24px;
+      margin-right: 0;
     }
 
     button,
@@ -103,13 +120,24 @@ header {
 
 @media (max-width: $mobile-width-only) {
   .header__contacts {
-    min-width: 72px;
+    margin-top: 5px;
+    min-width: 78px;
+  }
+
+  .header__phone-wrapper {
+    svg {
+      display: inline-block;
+      vertical-align: baseline;
+      margin-right: 5px;
+    }
   }
 
   .header__wrapper {
-    padding-bottom: 231px;
+    padding-top: 15px;
+    padding-bottom: 232px;
 
     img {
+      margin-left: 8px;
       width: 38px;
     }
   }

@@ -1,7 +1,7 @@
 .main-block {
   display: flex;
   flex-direction: column;
-  min-height: 584px;
+  min-height: 564px;
   position: relative;
 
   &::after {
@@ -9,8 +9,8 @@
     content: "";
     width: 705px;
     height: 515px;
-    top: 0;
-    right: -30px;
+    top: -60px;
+    right: -75px;
     background: url("../img/circuit.png");
     background-repeat: no-repeat;
     background-size: auto;
@@ -22,8 +22,8 @@
     content: "";
     width: 705px;
     height: 670px;
-    bottom: 60px;
-    right: -20px;
+    bottom: 90px;
+    right: -67px;
     background: url("../img/triangles.svg");
     background-repeat: no-repeat;
     background-size: auto;
@@ -47,8 +47,8 @@
     max-width: 683px;
     margin: 0;
     margin-left: 94px;
-    margin-top: 30px;
-    margin-bottom: 37px;
+    margin-top: 28px;
+    margin-bottom: 42px;
     z-index: 2;
     position: relative;
 
@@ -74,6 +74,7 @@
   display: block;
   max-width: 407px;
   padding: 17px;
+  padding-top: 19px;
   background: $blue;
   border-radius: 5px;
   margin-left: 94px;
@@ -102,8 +103,8 @@
   opacity: 0.5;
   align-self: flex-start;
   margin-top: auto;
-  margin-left: -35px;
-  margin-bottom: 89px;
+  margin-left: -36px;
+  margin-bottom: 129px;
   transform: rotate(-90deg);
   z-index: 2;
 
@@ -119,22 +120,22 @@
 
 @media (max-width: $tablet-width) {
   .main-block {
-    min-height: 500px;
+    min-height: 498px;
 
     &::after {
       width: 465px;
       height: 340px;
-      top: -60px;
-      right: -200px;
+      top: -75px;
+      right: -230px;
       background-size: contain;
     }
 
     &::before {
       width: 505px;
       height: 505px;
-      top: -200px;
-      right: -180px;
-      background-size: contain;
+      top: -227px;
+      right: -200px;
+      background-size: cover;
     }
 
     h1 {
@@ -148,19 +149,21 @@
       font-size: 18px;
       line-height: 28px;
       max-width: 356px;
+      margin-top: 30px;
+      margin-bottom: 55px;
       margin-left: 115px;
 
       &::before {
         width: 33px;
         height: 2px;
         top: 17px;
-        left: -52px;
+        left: -50px;
       }
     }
   }
 
   .main-block__button {
-    max-width: 351px;
+    max-width: 379px;
     padding: 17px;
     margin-left: 115px;
   }
@@ -178,33 +181,37 @@
     &::after {
       width: 301px;
       height: 220px;
-      top: -180px;
-      right: -20px;
+      top: -192px;
+      right: -18px;
     }
 
     &::before {
+      width: 480px;
+      height: 480px;
       top: -330px;
-      right: -350px;
+      right: -322px;
     }
 
     h1 {
       font-size: 40px;
       line-height: 47px;
       max-width: 277px;
-      margin-left: 0;
+      margin-left: 5px;
     }
 
     p {
       font-size: 16px;
       line-height: 25px;
       max-width: 245px;
-      margin-left: 49px;
+      margin-top: 28px;
+      margin-bottom: 43px;
+      margin-left: 57px;
 
       &::before {
         width: 33px;
         height: 2px;
-        top: 17px;
-        left: -48px;
+        top: 16px;
+        left: -49px;
       }
     }
   }
