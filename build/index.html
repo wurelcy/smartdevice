@@ -88,7 +88,7 @@
               </svg>
               <span>+7 (495) 000 52 52</span>
             </a>
-            <button type="button" name="call">Заказать звонок</button>
+            <button type="button" name="call" class="header__call-button">Заказать звонок</button>
           </div>
         </div>
         <section class="main-block">
@@ -287,7 +287,7 @@
       </div>
     </footer>
 
-    <section class="callback-popup">
+    <section class="callback-popup pop-up">
       <p>Закажите звонок</p>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
       <form>
@@ -300,10 +300,10 @@
           <input id="phone-popup" type="tel" placeholder="Телефон" name="user-phone" maxlength="14" required>
         </div>
         <textarea placeholder="Ваш вопрос" name="user-question" id="question-popup"></textarea>
-        <button type="submit">Отправить</button>
+        <button type="submit" class="callback-popup__submit">Отправить</button>
         <div class="callback-popup__personal-data">
-          <input type="checkbox" id="personal-data-popup" checked required>
-          <label for="personal-data-popup">Я согласен на обработку персональных данных</label>
+          <input type="checkbox" id="personal-data-popup" class="visually-hidden" checked required>
+          <label class="callback-popup__label" for="personal-data-popup">Я согласен на обработку персональных данных</label>
         </div>
       </form>
       <button class="callback-popup__button-close" type="button" aria-label="Закрыть окно заказа обратного звонка"></button>

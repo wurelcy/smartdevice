@@ -78,6 +78,17 @@
   border-radius: 5px;
   margin-left: 94px;
   z-index: 2;
+
+  &:focus,
+  &:hover {
+    color: $lightgrey;
+    background: rgba($blue, 0.8);
+  }
+
+  &:active {
+    color: $lightgrey;
+    background: $darkest;
+  }
 }
 
 .main-block__button--mobile {
@@ -95,6 +106,15 @@
   margin-bottom: 89px;
   transform: rotate(-90deg);
   z-index: 2;
+
+  &:focus,
+  &:hover {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 @media (max-width: $tablet-width) {

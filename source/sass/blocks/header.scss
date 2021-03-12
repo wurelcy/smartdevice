@@ -25,20 +25,32 @@ header {
   justify-content: space-between;
   align-items: center;
   min-width: 659px;
+}
 
-  button {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    background: transparent;
-    padding: 14px;
+.header__call-button {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: transparent;
+  padding: 14px;
+  color: $white;
+  border: 1px solid $white;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    color: $grey;
+    border-color: $grey;
+  }
+
+  &:active {
     color: $white;
-    border: 1px solid $white;
-    border-radius: 5px;
-    cursor: pointer;
+    border-color: $white;
+    opacity: 0.1;
   }
 }
 
@@ -47,10 +59,18 @@ header {
   font-size: 16px;
   line-height: 18px;
 
-
   svg {
     vertical-align: middle;
     display: inline-block;
+  }
+
+  &:focus,
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

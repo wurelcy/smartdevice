@@ -397,19 +397,27 @@ header {
   justify-content: space-between;
   align-items: center;
   min-width: 659px; }
-  .header__contacts button {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    background: transparent;
-    padding: 14px;
+
+.header__call-button {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: transparent;
+  padding: 14px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  cursor: pointer; }
+  .header__call-button:focus, .header__call-button:hover {
+    color: #788891;
+    border-color: #788891; }
+  .header__call-button:active {
     color: #ffffff;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    cursor: pointer; }
+    border-color: #ffffff;
+    opacity: 0.1; }
 
 .header__contact {
   font-family: "PT Mono";
@@ -418,6 +426,10 @@ header {
   .header__contact svg {
     vertical-align: middle;
     display: inline-block; }
+  .header__contact:focus, .header__contact:hover {
+    opacity: 0.7; }
+  .header__contact:active {
+    opacity: 0.3; }
 
 @media (max-width: 1023px) {
   .header__wrapper {
@@ -511,6 +523,12 @@ header {
   border-radius: 5px;
   margin-left: 94px;
   z-index: 2; }
+  .main-block__button:focus, .main-block__button:hover {
+    color: #ebebeb;
+    background: rgba(0, 178, 255, 0.8); }
+  .main-block__button:active {
+    color: #ebebeb;
+    background: #1b2d37; }
 
 .main-block__button--mobile {
   display: none; }
@@ -526,6 +544,10 @@ header {
   margin-bottom: 89px;
   transform: rotate(-90deg);
   z-index: 2; }
+  .main-block__scroll:focus, .main-block__scroll:hover {
+    opacity: 1; }
+  .main-block__scroll:active {
+    opacity: 0.1; }
 
 @media (max-width: 1023px) {
   .main-block {
@@ -1369,7 +1391,7 @@ header {
     height: 1px;
     background-color: rgba(98, 105, 98, 0.2);
     left: 0;
-    bottom: 80px; }
+    bottom: 50px; }
 
 .copyright__wrapper {
   display: flex;
@@ -1392,3 +1414,151 @@ header {
     margin-top: 28px; }
     .copyright::before {
       display: none; } }
+
+.callback-popup {
+  width: 490px;
+  height: 605px;
+  background-color: #00b2ff;
+  position: relative;
+  color: #ffffff;
+  padding: 0 39px;
+  padding-top: 28px; }
+  .callback-popup p {
+    font-size: 28px;
+    line-height: 39px;
+    margin: 0;
+    padding: 0; }
+    .callback-popup p:last-of-type {
+      font-family: "PT Mono";
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 18px;
+      margin-bottom: 34px;
+      max-width: 370px; }
+  .callback-popup form {
+    display: flex;
+    flex-direction: column; }
+  .callback-popup textarea {
+    min-height: 104px;
+    margin-bottom: 30px;
+    border: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-left: 24px;
+    padding-top: 13px;
+    color: #ffffff;
+    font-family: "PT Mono";
+    resize: none; }
+    .callback-popup textarea::-moz-placeholder {
+      color: #ffffff;
+      font-family: "PT Mono";
+      font-size: 16px;
+      line-height: 22px; }
+    .callback-popup textarea::placeholder {
+      color: #ffffff;
+      font-family: "PT Mono";
+      font-size: 16px;
+      line-height: 22px; }
+
+.callback-popup__button-close {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/icon-cross.svg");
+  background-position: center;
+  top: 20px;
+  right: 20px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer; }
+
+.callback-popup__name input,
+.callback-popup__phone input {
+  height: 51px;
+  min-width: 100%;
+  border: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 24px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-family: "PT Mono"; }
+  .callback-popup__name input::-moz-placeholder, .callback-popup__phone input::-moz-placeholder {
+    color: #ffffff;
+    font-family: "PT Mono";
+    font-size: 16px;
+    line-height: 22px; }
+  .callback-popup__name input::placeholder,
+  .callback-popup__phone input::placeholder {
+    color: #ffffff;
+    font-family: "PT Mono";
+    font-size: 16px;
+    line-height: 22px; }
+
+.callback-popup__submit {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  padding: 14px 0;
+  color: #ffffff;
+  min-width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 34px; }
+
+.callback-popup__label {
+  position: relative;
+  font-family: "PT Mono";
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 36px;
+  color: rgba(255, 255, 255, 0.8); }
+
+.callback-popup__personal-data {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: 52px; }
+  .callback-popup__personal-data input + label::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    left: -40px;
+    top: 2px; }
+  .callback-popup__personal-data input:hover + label::before,
+  .callback-popup__personal-data input:focus + label::before {
+    border-color: #1b2d37; }
+  .callback-popup__personal-data input:active + label::before {
+    border-color: #1b2d37; }
+  .callback-popup__personal-data input + label::after {
+    display: none;
+    position: absolute;
+    content: "";
+    left: -36px;
+    top: 7px;
+    height: 5px;
+    width: 8px;
+    background-color: #ffffff;
+    -webkit-mask: url("../img/icon-check.svg");
+            mask: url("../img/icon-check.svg"); }
+  .callback-popup__personal-data input:hover + label::after,
+  .callback-popup__personal-data input:focus + label::after {
+    background-color: #1b2d37; }
+  .callback-popup__personal-data input:checked + label::after {
+    display: block; }
+
+.pop-up {
+  display: none;
+  position: fixed;
+  top: 10%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 5; }
+
+.pop-up--show {
+  display: block; }

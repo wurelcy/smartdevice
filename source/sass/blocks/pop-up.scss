@@ -1,0 +1,13 @@
+.pop-up {
+  display: none;
+  position: fixed;
+  top: 10%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  z-index: 5;
+}
+
+.pop-up--show {
+  display: block;
+}

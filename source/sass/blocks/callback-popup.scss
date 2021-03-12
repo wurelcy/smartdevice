@@ -1,0 +1,157 @@
+.callback-popup {
+  width: 490px;
+  height: 605px;
+  background-color: $blue;
+  position: relative;
+  color: $white;
+  padding: 0 39px;
+  padding-top: 28px;
+
+  p {
+    font-size: 28px;
+    line-height: 39px;
+    margin: 0;
+    padding: 0;
+
+    &:last-of-type {
+      font-family: "PT Mono";
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 18px;
+      margin-bottom: 34px;
+      max-width: 370px;
+    }
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  textarea {
+    min-height: 104px;
+    margin-bottom: 30px;
+    border: 0;
+    background-color: rgba($white, 0.1);
+    padding-left: 24px;
+    padding-top: 13px;
+    color: $white;
+    font-family: "PT Mono";
+    resize: none;
+
+    &::placeholder {
+      color: $white;
+      font-family: "PT Mono";
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+.callback-popup__button-close {
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  background-image: url('../img/icon-cross.svg');
+  background-position: center;
+  top: 20px;
+  right: 20px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.callback-popup__name,
+.callback-popup__phone {
+  input {
+    height: 51px;
+    min-width: 100%;
+    border: 0;
+    background-color: rgba($white, 0.1);
+    padding-left: 24px;
+    margin-bottom: 30px;
+    color: $white;
+    font-family: "PT Mono";
+
+    &::placeholder {
+      color: $white;
+      font-family: "PT Mono";
+      font-size: 16px;
+      line-height: 22px;
+    }
+  }
+}
+
+.callback-popup__submit {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid $white;
+  border-radius: 5px;
+  padding: 14px 0;
+  color: $white;
+  min-width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 34px;
+}
+
+.callback-popup__label {
+  position: relative;
+  font-family: "PT Mono";
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 36px;
+  color: rgba($white, 0.8);
+}
+
+.callback-popup__personal-data {
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: 52px;
+
+  input {
+    & + label::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 1px solid $white;
+    left: -40px;
+    top: 2px;
+  }
+
+    &:hover + label::before,
+    &:focus + label::before {
+      border-color: $darkest;
+    }
+
+    &:active + label::before {
+      border-color: $darkest;
+    }
+
+    & + label::after {
+      display: none;
+      position: absolute;
+      content: "";
+      left: -36px;
+      top: 7px;
+      height: 5px;
+      width: 8px;
+      background-color: $white;
+      mask: url("../img/icon-check.svg");
+    }
+
+    &:hover + label::after,
+    &:focus + label::after {
+      background-color: $darkest;
+    }
+
+    &:checked + label::after {
+      display: block;
+    }
+  }
+}
