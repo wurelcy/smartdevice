@@ -80,6 +80,7 @@
 
   .contacts__button {
     display: block;
+    outline: none;
     border: 0;
     width: 16px;
     cursor: pointer;
@@ -90,26 +91,27 @@
       content: "";
       position: absolute;
       width: 16px;
-      height: 16px;
-      mask: url("../img/icon-plus.svg");
+      height: 1px;
       background-color: $icon;
-      right: -2px;
-      top: -7px;
+      right: -12px;
+      top: -1px;
     }
   }
 
-  .contacts__list--closed {
-    display: none;
-  }
+  .accordeon--closed {
+    .contacts__list {
+      display: none;
+    }
 
-  .contacts__wrapper--opened {
     .contacts__button {
       &::before {
-        height: 1px;
-        mask: none;
-        background-color: $icon;
+        content: "";
+        position: absolute;
+        mask: url("../img/icon-plus.svg");
+        width: 16px;
+        height: 16px;
         right: -12px;
-        top: -1px;
+        top: -7px;
       }
     }
   }
