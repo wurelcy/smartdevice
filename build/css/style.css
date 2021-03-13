@@ -1214,6 +1214,7 @@ a {
   min-width: 270px;
   border: 0;
   background-color: rgba(255, 255, 255, 0.1);
+  padding: 13px;
   padding-left: 17px;
   margin-bottom: 40px;
   color: #ffffff;
@@ -1787,6 +1788,7 @@ a {
   min-width: 100%;
   border: 0;
   background-color: rgba(255, 255, 255, 0.1);
+  padding: 13px;
   padding-left: 24px;
   margin-bottom: 30px;
   color: #ffffff;
