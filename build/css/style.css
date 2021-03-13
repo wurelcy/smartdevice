@@ -374,6 +374,31 @@ a {
   align-content: start;
   font-family: "Roboto Condensed", "Roboto", sans-serif; }
 
+.page-body__wrapper {
+  position: relative;
+  overflow: hidden; }
+  .page-body__wrapper::before {
+    content: "";
+    position: absolute;
+    width: 760px;
+    height: 720px;
+    bottom: -50px;
+    left: 120px;
+    background-image: url("../img/single-triangle.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+    transform: rotate(180deg); }
+  .page-body__wrapper::after {
+    content: "";
+    position: absolute;
+    width: 760px;
+    height: 720px;
+    bottom: 32%;
+    right: 35%;
+    background-image: url("../img/single-triangle.svg");
+    background-repeat: no-repeat;
+    z-index: -1; }
+
 .header {
   background: #1b2d37 url("../img/bg@1x.png");
   background-repeat: no-repeat;
@@ -424,7 +449,7 @@ a {
     opacity: 0.1; }
 
 .header__contact {
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   font-size: 16px;
   line-height: 18px; }
   .header__contact svg {
@@ -485,10 +510,14 @@ a {
     height: 515px;
     top: -60px;
     right: -75px;
-    background: url("../img/circuit.png");
+    background: url("../img/circuit@1x.png");
     background-repeat: no-repeat;
     background-size: auto;
     z-index: 1; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      .main-block::after {
+        background-image: url("../img/circuit@2x.png");
+        background-size: 100%; } }
   .main-block::before {
     position: absolute;
     content: "";
@@ -511,7 +540,7 @@ a {
   .main-block p {
     font-size: 22px;
     line-height: 34px;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     max-width: 683px;
     margin: 0;
     margin-left: 94px;
@@ -554,7 +583,7 @@ a {
   display: none; }
 
 .main-block__scroll {
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   font-size: 14px;
   line-height: 16px;
   opacity: 0.5;
@@ -647,7 +676,29 @@ a {
     margin: 0 auto; } }
 
 .advantages {
-  padding-top: 111px; }
+  padding-top: 111px;
+  position: relative;
+  overflow: hidden; }
+  .advantages::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 50px;
+    left: 520px;
+    background-image: url("../img/small-triangle-left.svg");
+    background-repeat: no-repeat;
+    z-index: -1; }
+  .advantages::after {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    bottom: -30px;
+    right: 290px;
+    background-image: url("../img/small-triangle-right.svg");
+    background-repeat: no-repeat;
+    z-index: -1; }
 
 .advantages__list {
   list-style: none;
@@ -661,6 +712,7 @@ a {
 .advantages__item {
   border: 1px solid #ebebeb;
   border-left: 3px solid #00b2ff;
+  background-color: #ffffff;
   padding-top: 39px;
   padding-left: 42px;
   padding-right: 42px;
@@ -684,7 +736,7 @@ a {
   .advantages__item p {
     padding: 0;
     margin: 0;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     font-size: 16px;
     line-height: 22px;
     color: #666666;
@@ -695,6 +747,10 @@ a {
     color: #ffffff; }
     .advantages__item:hover p, .advantages__item:focus p {
       color: #ffffff; }
+
+@media (max-width: 1185px) {
+  .advantages__item:nth-child(2n + 1), .advantages__item:first-child {
+    margin-right: 0; } }
 
 @media (max-width: 1023px) {
   .advantages {
@@ -786,16 +842,21 @@ a {
     padding-bottom: 110px;
     padding-left: 302px;
     position: relative; }
-    .about .container:before {
+    .about .container::before {
       content: "";
       position: absolute;
       height: 302px;
       width: 156px;
-      background-image: url("../img/number.png");
+      background-image: url("../img/number@1x.png");
       background-repeat: no-repeat;
       background-position: center;
       top: 88px;
       left: 125px; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        .about .container::before {
+          background-image: url("../img/number@2x.png");
+          background-size: 95%;
+          left: 105px; } }
   .about h2 {
     margin: 0;
     padding: 0;
@@ -809,7 +870,7 @@ a {
     padding: 0;
     font-size: 16px;
     line-height: 22px;
-    font-family: "PT Mono"; }
+    font-family: "PT Mono", sans-serif; }
 
 .about__link {
   display: block;
@@ -834,7 +895,7 @@ a {
     padding-top: 25px;
     padding-bottom: 83px;
     padding-left: 185px; }
-    .about .container:before {
+    .about .container::before {
       height: 361px;
       width: 177px;
       background-size: cover;
@@ -866,7 +927,7 @@ a {
     padding-top: 36px;
     padding-bottom: 65px;
     padding-left: 4px; }
-    .about .container:before {
+    .about .container::before {
       display: none; }
   .about h2 {
     font-size: 28px;
@@ -908,6 +969,10 @@ a {
   min-height: 620px;
   background: url("../img/manifacturing@1x.png");
   background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .services__item {
+      background-image: url("../img/manifacturing@2x.png");
+      background-size: 100%; } }
   .services__item h3 {
     margin: 0;
     padding: 0;
@@ -918,9 +983,17 @@ a {
   .services__item:nth-child(3n-1) {
     background: url("../img/installation@1x.png");
     background-repeat: no-repeat; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      .services__item:nth-child(3n-1) {
+        background-image: url("../img/installation@2x.png");
+        background-size: 100%; } }
   .services__item:nth-child(3n) {
     background: url("../img/lighting@1x.png");
     background-repeat: no-repeat; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      .services__item:nth-child(3n) {
+        background-image: url("../img/lighting@2x.png");
+        background-size: 100%; } }
 
 .services__link {
   display: flex;
@@ -970,17 +1043,34 @@ a {
     width: 715px;
     background: url("../img/manifacturing-tablet@1x.png");
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat; } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
+    .services__item {
+      background-image: url("../img/manifacturing-tablet@2x.png"); } }
+
+@media (max-width: 1023px) {
     .services__item:nth-child(3n-1) {
       background: url("../img/installation@1x.png");
       background-size: cover;
-      background-position: 0px;
-      width: 720px; }
+      background-position: 0;
+      width: 720px; } }
+    @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
+      .services__item:nth-child(3n-1) {
+        background-image: url("../img/installation@2x.png");
+        background-size: 100%; } }
+
+@media (max-width: 1023px) {
     .services__item:nth-child(3n) {
       background: url("../img/lighting@1x.png");
       background-size: cover;
-      background-position: 0px;
-      width: 720px; }
+      background-position: 0;
+      width: 720px; } }
+    @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
+      .services__item:nth-child(3n) {
+        background-image: url("../img/lighting@2x.png");
+        background-size: 100%; } }
+
+@media (max-width: 1023px) {
       .services__item:nth-child(3n) .services__link {
         padding-top: 50px; }
   .services__link {
@@ -1032,6 +1122,10 @@ a {
       background-image: url("../img/paper-airplane@1x.png");
       background-repeat: no-repeat;
       z-index: 1; }
+      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+        .feedback .container::before {
+          background-image: url("../img/paper-airplane@2x.png");
+          background-size: 100%; } }
     .feedback .container::after {
       content: "";
       position: absolute;
@@ -1048,7 +1142,7 @@ a {
     margin: 0;
     padding: 0; }
     .feedback p:last-of-type {
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       margin-left: 4px;
       font-weight: normal;
       font-size: 16px;
@@ -1093,19 +1187,19 @@ a {
     padding-left: 16px;
     padding-top: 13px;
     color: #ffffff;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     resize: none;
     outline: none; }
     .feedback textarea:focus {
       border: 1px solid #ffffff; }
     .feedback textarea::-moz-placeholder {
       color: #ffffff;
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       font-size: 16px;
       line-height: 22px; }
     .feedback textarea::placeholder {
       color: #ffffff;
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       font-size: 16px;
       line-height: 22px; }
 
@@ -1123,20 +1217,20 @@ a {
   padding-left: 17px;
   margin-bottom: 40px;
   color: #ffffff;
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   outline: none; }
   .feedback__name input:focus,
   .feedback__phone input:focus {
     border: 1px solid #ffffff; }
   .feedback__name input::-moz-placeholder, .feedback__phone input::-moz-placeholder {
     color: #ffffff;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     font-size: 16px;
     line-height: 22px; }
   .feedback__name input::placeholder,
   .feedback__phone input::placeholder {
     color: #ffffff;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     font-size: 16px;
     line-height: 22px; }
 
@@ -1153,10 +1247,16 @@ a {
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase; }
+  .feedback__submit:hover, .feedback__submit:focus {
+    border-color: rgba(27, 45, 55, 0.4);
+    color: rgba(27, 45, 55, 0.4); }
+  .feedback__submit:active {
+    border-color: rgba(27, 45, 55, 0.2);
+    color: rgba(27, 45, 55, 0.2); }
 
 .feedback__label {
   position: relative;
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   font-size: 14px;
   line-height: 16px;
   max-width: 230px; }
@@ -1321,7 +1421,7 @@ a {
       margin-top: 5px;
       margin-left: 15px;
       display: block;
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       font-size: 13px;
       line-height: 24px;
       letter-spacing: 0.04em;
@@ -1349,6 +1449,15 @@ a {
   justify-content: space-between;
   max-width: 112px; }
 
+.social-list__link svg {
+  fill: #cdcdcd; }
+
+.social-list__link:hover svg, .social-list__link:focus svg {
+  fill: #788891; }
+
+.social-list__link:active svg {
+  opacity: 0.3; }
+
 @media (max-width: 1023px) {
   .social-list {
     margin: 0;
@@ -1367,7 +1476,7 @@ a {
     text-transform: uppercase; }
 
 .site-nav__list {
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1377,7 +1486,7 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  opacity: 0.5;
+  color: rgba(27, 45, 55, 0.5);
   max-height: 100px;
   max-width: 516px; }
 
@@ -1386,6 +1495,12 @@ a {
 
 .site-nav__button {
   display: none; }
+
+.site-nav__link:hover, .site-nav__link:focus {
+  color: #1b2d37; }
+
+.site-nav__link:active {
+  color: rgba(27, 45, 55, 0.2); }
 
 @media (max-width: 1023px) {
   .site-nav {
@@ -1462,7 +1577,7 @@ a {
     letter-spacing: 0.05em; }
 
 .contacts__list {
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1472,11 +1587,17 @@ a {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  opacity: 0.5;
+  color: rgba(27, 45, 55, 0.5);
   max-height: 100px; }
 
 .contacts__button {
   display: none; }
+
+.contacts__link:hover, .contacts__link:focus {
+  color: #1b2d37; }
+
+.contacts__link:active {
+  color: rgba(27, 45, 55, 0.2); }
 
 @media (max-width: 1023px) {
   .contacts {
@@ -1545,7 +1666,7 @@ a {
   justify-content: space-between;
   flex-grow: 1;
   align-items: center;
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-size: 13px;
@@ -1565,6 +1686,10 @@ a {
 
 .copyright__confidentiality {
   margin-right: 265px; }
+  .copyright__confidentiality:hover, .copyright__confidentiality:focus {
+    color: #1b2d37; }
+  .copyright__confidentiality:active {
+    color: rgba(27, 45, 55, 0.2); }
 
 .copyright__wrapper {
   display: flex;
@@ -1611,7 +1736,7 @@ a {
     margin: 0;
     padding: 0; }
     .callback-popup p:last-of-type {
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       font-size: 16px;
       line-height: 22px;
       margin-top: 18px;
@@ -1628,19 +1753,19 @@ a {
     padding-left: 24px;
     padding-top: 13px;
     color: #ffffff;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     resize: none;
     outline: none; }
     .callback-popup textarea:focus {
       border: 1px solid #ffffff; }
     .callback-popup textarea::-moz-placeholder {
       color: #ffffff;
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       font-size: 16px;
       line-height: 22px; }
     .callback-popup textarea::placeholder {
       color: #ffffff;
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       font-size: 16px;
       line-height: 22px; }
 
@@ -1665,20 +1790,20 @@ a {
   padding-left: 24px;
   margin-bottom: 30px;
   color: #ffffff;
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   outline: none; }
   .callback-popup__name input:focus,
   .callback-popup__phone input:focus {
     border: 1px solid #ffffff; }
   .callback-popup__name input::-moz-placeholder, .callback-popup__phone input::-moz-placeholder {
     color: #ffffff;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     font-size: 16px;
     line-height: 22px; }
   .callback-popup__name input::placeholder,
   .callback-popup__phone input::placeholder {
     color: #ffffff;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     font-size: 16px;
     line-height: 22px; }
 
@@ -1696,10 +1821,16 @@ a {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 34px; }
+  .callback-popup__submit:hover, .callback-popup__submit:focus {
+    border-color: rgba(27, 45, 55, 0.4);
+    color: rgba(27, 45, 55, 0.4); }
+  .callback-popup__submit:active {
+    border-color: rgba(27, 45, 55, 0.2);
+    color: rgba(27, 45, 55, 0.2); }
 
 .callback-popup__label {
   position: relative;
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 36px;

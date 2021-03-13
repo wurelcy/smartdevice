@@ -8,6 +8,25 @@
   max-width: 112px;
 }
 
+.social-list__link {
+  svg {
+    fill: $social;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: $grey;
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+}
+
 @media (max-width: $tablet-width) {
   .social-list {
     margin: 0;

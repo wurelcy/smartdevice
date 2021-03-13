@@ -11,10 +11,15 @@
     height: 515px;
     top: -60px;
     right: -75px;
-    background: url("../img/circuit.png");
+    background: url("../img/circuit@1x.png");
     background-repeat: no-repeat;
     background-size: auto;
     z-index: 1;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/circuit@2x.png");
+      background-size: 100%;
+    }
   }
 
   &::before {
@@ -43,7 +48,7 @@
   p {
     font-size: 22px;
     line-height: 34px;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     max-width: 683px;
     margin: 0;
     margin-left: 94px;
@@ -97,7 +102,7 @@
 }
 
 .main-block__scroll {
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   font-size: 14px;
   line-height: 16px;
   opacity: 0.5;

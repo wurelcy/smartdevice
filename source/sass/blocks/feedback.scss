@@ -19,6 +19,11 @@
       background-image: url("../img/paper-airplane@1x.png");
       background-repeat: no-repeat;
       z-index: 1;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/paper-airplane@2x.png");
+        background-size: 100%;
+      }
     }
 
     &::after {
@@ -41,7 +46,7 @@
     padding: 0;
 
     &:last-of-type {
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       margin-left: 4px;
       font-weight: normal;
       font-size: 16px;
@@ -95,7 +100,7 @@
     padding-left: 16px;
     padding-top: 13px;
     color: $white;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     resize: none;
     outline: none;
 
@@ -105,7 +110,7 @@
 
     &::placeholder {
       color: $white;
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       font-size: 16px;
       line-height: 22px;
     }
@@ -128,7 +133,7 @@
     padding-left: 17px;
     margin-bottom: 40px;
     color: $white;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     outline: none;
 
     &:focus {
@@ -137,7 +142,7 @@
 
     &::placeholder {
       color: $white;
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       font-size: 16px;
       line-height: 22px;
     }
@@ -157,11 +162,22 @@
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    border-color: rgba($darkest, 0.4);
+    color: rgba($darkest, 0.4);
+  }
+
+  &:active {
+    border-color: rgba($darkest, 0.2);
+    color: rgba($darkest, 0.2);
+  }
 }
 
 .feedback__label {
   position: relative;
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   font-size: 14px;
   line-height: 16px;
   max-width: 230px;
@@ -175,15 +191,15 @@
 
   input {
     & + label::before {
-    position: absolute;
-    content: "";
-    width: 16px;
-    height: 16px;
-    background-color: transparent;
-    border: 1px solid $white;
-    left: -32px;
-    top: 2px;
-  }
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      border: 1px solid $white;
+      left: -32px;
+      top: 2px;
+    }
 
     &:hover + label::before,
     &:focus + label::before {
@@ -269,8 +285,8 @@
   .feedback__button-block {
     input {
       & + label::before {
-      left: -33px;
-    }
+        left: -33px;
+      }
 
       & + label::after {
         left: -29px;
@@ -350,8 +366,8 @@
 
     input {
       & + label::before {
-      left: -34px;
-    }
+        left: -34px;
+      }
 
       & + label::after {
         left: -30px;

@@ -6,3 +6,33 @@
   align-content: start;
   font-family: "Roboto Condensed", "Roboto", sans-serif;
 }
+
+.page-body__wrapper {
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 760px;
+    height: 720px;
+    bottom: -50px;
+    left: 120px;
+    background-image: url("../img/single-triangle.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+    transform: rotate(180deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 760px;
+    height: 720px;
+    bottom: 32%;
+    right: 35%;
+    background-image: url("../img/single-triangle.svg");
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+}

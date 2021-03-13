@@ -32,6 +32,11 @@
   background: url("../img/manifacturing@1x.png");
   background-repeat: no-repeat;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/manifacturing@2x.png");
+    background-size: 100%;
+  }
+
   h3 {
     margin: 0;
     padding: 0;
@@ -44,11 +49,21 @@
   &:nth-child(3n-1) {
     background: url("../img/installation@1x.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/installation@2x.png");
+      background-size: 100%;
+    }
   }
 
   &:nth-child(3n) {
     background: url("../img/lighting@1x.png");
     background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/lighting@2x.png");
+      background-size: 100%;
+    }
   }
 }
 
@@ -114,18 +129,32 @@
     background-size: cover;
     background-repeat: no-repeat;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/manifacturing-tablet@2x.png");
+    }
+
     &:nth-child(3n-1) {
       background: url("../img/installation@1x.png");
       background-size: cover;
-      background-position: 0px;
+      background-position: 0;
       width: 720px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/installation@2x.png");
+        background-size: 100%;
+      }
     }
 
     &:nth-child(3n) {
       background: url("../img/lighting@1x.png");
       background-size: cover;
-      background-position: 0px;
+      background-position: 0;
       width: 720px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/lighting@2x.png");
+        background-size: 100%;
+      }
 
       .services__link {
         padding-top: 50px;

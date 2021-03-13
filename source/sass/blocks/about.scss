@@ -7,16 +7,22 @@
     padding-left: 302px;
     position: relative;
 
-    &:before {
+    &::before {
       content: "";
       position: absolute;
       height: 302px;
       width: 156px;
-      background-image: url("../img/number.png");
+      background-image: url("../img/number@1x.png");
       background-repeat: no-repeat;
       background-position: center;
       top: 88px;
       left: 125px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/number@2x.png");
+        background-size: 95%;
+        left: 105px;
+      }
     }
   }
 
@@ -26,7 +32,6 @@
     font-weight: normal;
     font-size: 36px;
     line-height: 51px;
-
   }
 
   p {
@@ -36,7 +41,7 @@
     padding: 0;
     font-size: 16px;
     line-height: 22px;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
   }
 }
 
@@ -69,7 +74,7 @@
       padding-bottom: 83px;
       padding-left: 185px;
 
-      &:before {
+      &::before {
         height: 361px;
         width: 177px;
         background-size: cover;
@@ -119,7 +124,7 @@
       padding-bottom: 65px;
       padding-left: 4px;
 
-      &:before {
+      &::before {
         display: none;
       }
     }

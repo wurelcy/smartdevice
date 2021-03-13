@@ -14,7 +14,7 @@
     padding: 0;
 
     &:last-of-type {
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       font-size: 16px;
       line-height: 22px;
       margin-top: 18px;
@@ -36,7 +36,7 @@
     padding-left: 24px;
     padding-top: 13px;
     color: $white;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     resize: none;
     outline: none;
 
@@ -46,7 +46,7 @@
 
     &::placeholder {
       color: $white;
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       font-size: 16px;
       line-height: 22px;
     }
@@ -57,7 +57,7 @@
   position: absolute;
   width: 17px;
   height: 17px;
-  background-image: url('../img/icon-cross.svg');
+  background-image: url("../img/icon-cross.svg");
   background-position: center;
   top: 20px;
   right: 20px;
@@ -76,7 +76,7 @@
     padding-left: 24px;
     margin-bottom: 30px;
     color: $white;
-    font-family: "PT Mono";
+    font-family: "PT Mono", sans-serif;
     outline: none;
 
     &:focus {
@@ -85,7 +85,7 @@
 
     &::placeholder {
       color: $white;
-      font-family: "PT Mono";
+      font-family: "PT Mono", sans-serif;
       font-size: 16px;
       line-height: 22px;
     }
@@ -106,11 +106,22 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 34px;
+
+  &:hover,
+  &:focus {
+    border-color: rgba($darkest, 0.4);
+    color: rgba($darkest, 0.4);
+  }
+
+  &:active {
+    border-color: rgba($darkest, 0.2);
+    color: rgba($darkest, 0.2);
+  }
 }
 
 .callback-popup__label {
   position: relative;
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 36px;
@@ -124,15 +135,15 @@
 
   input {
     & + label::before {
-    position: absolute;
-    content: "";
-    width: 16px;
-    height: 16px;
-    background-color: transparent;
-    border: 1px solid $white;
-    left: -40px;
-    top: 2px;
-  }
+      position: absolute;
+      content: "";
+      width: 16px;
+      height: 16px;
+      background-color: transparent;
+      border: 1px solid $white;
+      left: -40px;
+      top: 2px;
+    }
 
     &:hover + label::before,
     &:focus + label::before {

@@ -14,7 +14,7 @@
 }
 
 .site-nav__list {
-  font-family: "PT Mono";
+  font-family: "PT Mono", sans-serif;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -24,7 +24,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  opacity: 0.5;
+  color: rgba($darkest, 0.5);
   max-height: 100px;
   max-width: 516px;
 }
@@ -35,6 +35,17 @@
 
 .site-nav__button {
   display: none;
+}
+
+.site-nav__link {
+  &:hover,
+  &:focus {
+    color: $darkest;
+  }
+
+  &:active {
+    color: rgba($darkest, 0.2);
+  }
 }
 
 @media (max-width: $tablet-width) {
