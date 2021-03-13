@@ -20,6 +20,7 @@ const feedbackFormAgreement = feedbackForm.querySelector('#personal-data');
 const feedbackFormNameInput = feedbackForm.querySelector('#name');
 const feedbackFormPhoneInput = feedbackForm.querySelector('#phone');
 const feedbackFormQuestionInput = feedbackForm.querySelector('#question');
+const escButton = 'Escape';
 
 /* Mask */
 
@@ -110,12 +111,6 @@ if (callbackButton) {
     showPopup();
   });
 
-  callbackButton.addEventListener('keydown', function(evt) {
-    if (evt.key === 'Enter') {
-      showPopup();
-    }
-  });
-
   callbackCloseButton.addEventListener('click', function() {
     closePopup();
   });
@@ -125,7 +120,7 @@ if (callbackButton) {
   });
 
   window.addEventListener('keydown', function(evt) {
-    if (evt.key === 'Escape') {
+    if (evt.key === escButton) {
       closePopup();
     }
   });
