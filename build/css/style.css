@@ -1737,3 +1737,15 @@ a {
 
 .pop-up--show {
   display: block; }
+
+.overlay {
+  min-width: 100%;
+  min-height: 100%;
+  background-color: rgba(27, 45, 55, 0.7);
+  z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+.overlay--hidden {
+  display: none; }
