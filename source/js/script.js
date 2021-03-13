@@ -134,9 +134,9 @@ if (callbackButton) {
     callbackSendButton.addEventListener('click', function (evt) {
       if (callbackAgreement.checked) {
         evt.preventDefault();
-        localStorage.setItem('modalUserName', callbackNameInput.value);
-        localStorage.setItem('modalPhoneNumber', callbackPhoneInput.value);
-        localStorage.setItem('modalQuestion', callbackQuestionInput.value);
+        localStorage.setItem('callbackUserName', callbackNameInput.value);
+        localStorage.setItem('callbackPhoneNumber', callbackPhoneInput.value);
+        localStorage.setItem('callbackQuestion', callbackQuestionInput.value);
         closePopup();
       }
     });
@@ -149,10 +149,9 @@ if (feedbackForm) {
   feedbackFormSendButton.addEventListener('click', function (evt) {
     if (feedbackFormAgreement.checked) {
       evt.preventDefault();
-      localStorage.setItem('modalUserName', feedbackFormNameInput.value);
-      localStorage.setItem('modalPhoneNumber', feedbackFormPhoneInput.value);
-      localStorage.setItem('modalQuestion', feedbackFormQuestionInput.value);
-      closePopup();
+      localStorage.setItem('feedbackUserName', feedbackFormNameInput.value);
+      localStorage.setItem('feedbackPhoneNumber', feedbackFormPhoneInput.value);
+      localStorage.setItem('feedbackQuestion', feedbackFormQuestionInput.value);
     }
   });
 }
