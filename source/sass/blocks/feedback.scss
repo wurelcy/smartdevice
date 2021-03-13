@@ -97,6 +97,11 @@
     color: $white;
     font-family: "PT Mono";
     resize: none;
+    outline: none;
+
+    &:focus {
+      border: 1px solid $white;
+    }
 
     &::placeholder {
       color: $white;
@@ -124,6 +129,11 @@
     margin-bottom: 40px;
     color: $white;
     font-family: "PT Mono";
+    outline: none;
+
+    &:focus {
+      border: 1px solid $white;
+    }
 
     &::placeholder {
       color: $white;

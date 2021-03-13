@@ -96,14 +96,14 @@
         <section class="main-block">
           <h1>Печатные платы</h1>
           <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-          <a class="main-block__button" href="#r">Получить бесплатную консультацию</a>
-          <a class="main-block__button main-block__button--mobile" href="#">Бесплатная консультация</a>
-          <a href="" class="main-block__scroll">Скролл вниз</a>
+          <a class="main-block__button" href="#feedback">Получить бесплатную консультацию</a>
+          <a class="main-block__button main-block__button--mobile" href="#feedback">Бесплатная консультация</a>
+          <a href="#advantages" class="main-block__scroll">Скролл вниз</a>
         </section>
       </div>
     </header>
     <main>
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <div class="container">
           <h2 class="visually-hidden">Преимущества</h2>
           <ul class="advantages__list">
@@ -172,7 +172,7 @@
           </ul>
         </div>
       </section>
-      <section class="feedback">
+      <section class="feedback" id="feedback">
         <div class="container">
           <div class="feedback__wrapper">
             <h2 class="visually-hidden">Обратная связь</h2>
@@ -185,10 +185,10 @@
               </div>
               <div class="feedback__phone">
                 <label for="tel" class="visually-hidden">Телефон</label>
-                <input type="tel" placeholder="Телефон" name="user-phone" id="tel" maxlength="14" required>
+                <input type="tel" placeholder="Телефон" name="user-phone" id="tel" maxlength="18" required>
               </div>
               <label for="question" class="visually-hidden">Ваш вопрос</label>
-              <textarea placeholder="Ваш вопрос" id="question"></textarea>
+              <textarea placeholder="Ваш вопрос" id="question" required></textarea>
               <div class="feedback__button-block">
                 <button type="submit" class="feedback__submit">Задать вопрос</button>
                 <input type="checkbox" id="personal-data" class="visually-hidden" checked required>
@@ -299,7 +299,7 @@
         </div>
         <div class="callback-popup__phone">
           <label for="phone-popup" class="visually-hidden">Телефон</label>
-          <input id="phone-popup" type="tel" placeholder="Телефон" name="user-phone" maxlength="14" required>
+          <input id="phone-popup" type="tel" placeholder="Телефон" name="user-phone" maxlength="18" required>
         </div>
         <textarea placeholder="Ваш вопрос" name="user-question" id="question-popup"></textarea>
         <button type="submit" class="callback-popup__submit">Отправить</button>

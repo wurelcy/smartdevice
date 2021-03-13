@@ -1094,7 +1094,10 @@ a {
     padding-top: 13px;
     color: #ffffff;
     font-family: "PT Mono";
-    resize: none; }
+    resize: none;
+    outline: none; }
+    .feedback textarea:focus {
+      border: 1px solid #ffffff; }
     .feedback textarea::-moz-placeholder {
       color: #ffffff;
       font-family: "PT Mono";
@@ -1120,7 +1123,11 @@ a {
   padding-left: 17px;
   margin-bottom: 40px;
   color: #ffffff;
-  font-family: "PT Mono"; }
+  font-family: "PT Mono";
+  outline: none; }
+  .feedback__name input:focus,
+  .feedback__phone input:focus {
+    border: 1px solid #ffffff; }
   .feedback__name input::-moz-placeholder, .feedback__phone input::-moz-placeholder {
     color: #ffffff;
     font-family: "PT Mono";
@@ -1622,7 +1629,10 @@ a {
     padding-top: 13px;
     color: #ffffff;
     font-family: "PT Mono";
-    resize: none; }
+    resize: none;
+    outline: none; }
+    .callback-popup textarea:focus {
+      border: 1px solid #ffffff; }
     .callback-popup textarea::-moz-placeholder {
       color: #ffffff;
       font-family: "PT Mono";
@@ -1655,7 +1665,11 @@ a {
   padding-left: 24px;
   margin-bottom: 30px;
   color: #ffffff;
-  font-family: "PT Mono"; }
+  font-family: "PT Mono";
+  outline: none; }
+  .callback-popup__name input:focus,
+  .callback-popup__phone input:focus {
+    border: 1px solid #ffffff; }
   .callback-popup__name input::-moz-placeholder, .callback-popup__phone input::-moz-placeholder {
     color: #ffffff;
     font-family: "PT Mono";
