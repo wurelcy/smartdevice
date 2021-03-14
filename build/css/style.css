@@ -399,6 +399,18 @@ a {
     background-repeat: no-repeat;
     z-index: -1; }
 
+@media (max-width: 1023px) {
+  .page-body__wrapper::before {
+    display: none; }
+  .page-body__wrapper::after {
+    bottom: 300px;
+    right: -200px; } }
+
+@media (max-width: 767px) {
+  .page-body__wrapper::after {
+    bottom: 422px;
+    right: -319px; } }
+
 .header {
   background: #1b2d37 url("../img/bg@1x.png");
   background-repeat: no-repeat;
@@ -755,6 +767,8 @@ a {
 @media (max-width: 1023px) {
   .advantages {
     padding-top: 54px; }
+    .advantages::before, .advantages::after {
+      display: none; }
   .advantages__list {
     justify-content: space-between; }
   .advantages__item {

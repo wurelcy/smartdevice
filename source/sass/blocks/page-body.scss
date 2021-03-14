@@ -36,3 +36,25 @@
     z-index: -1;
   }
 }
+
+@media (max-width: $tablet-width) {
+  .page-body__wrapper {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      bottom: 300px;
+      right: -200px;
+    }
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .page-body__wrapper {
+    &::after {
+      bottom: 422px;
+      right: -319px;
+    }
+  }
+}
