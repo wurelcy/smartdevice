@@ -372,7 +372,7 @@ a {
   grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
-  font-family: "Roboto Condensed", "Roboto", sans-serif; }
+  font-family: "Roboto Condensed", "Arial", sans-serif; }
 
 .page-body__wrapper {
   position: relative;
@@ -419,6 +419,10 @@ a {
   color: #ffffff;
   overflow-x: hidden;
   padding-top: 14px; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .header {
+      background: #1b2d37 url("../img/bg@2x.png");
+      background-size: 100%; } }
 
 .header__wrapper {
   display: flex;
@@ -461,7 +465,7 @@ a {
     opacity: 0.1; }
 
 .header__contact {
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", Arial, monospace;
   font-size: 16px;
   line-height: 18px; }
   .header__contact svg {
@@ -481,6 +485,8 @@ a {
     padding-top: 0; }
   .header__wrapper {
     padding-bottom: 116px; }
+  .header__call-button {
+    display: none; }
   .header__contacts {
     min-width: 83px;
     margin-right: 0; }
@@ -491,7 +497,6 @@ a {
       width: 24px;
       height: 24px;
       margin-right: 0; }
-    .header__contacts button,
     .header__contacts span {
       display: none; } }
 
@@ -552,7 +557,7 @@ a {
   .main-block p {
     font-size: 22px;
     line-height: 34px;
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", Arial, monospace;
     max-width: 683px;
     margin: 0;
     margin-left: 94px;
@@ -595,7 +600,7 @@ a {
   display: none; }
 
 .main-block__scroll {
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", Arial, monospace;
   font-size: 14px;
   line-height: 16px;
   opacity: 0.5;
@@ -748,7 +753,7 @@ a {
   .advantages__item p {
     padding: 0;
     margin: 0;
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", Arial, monospace;
     font-size: 16px;
     line-height: 22px;
     color: #666666;
@@ -851,26 +856,6 @@ a {
 
 .about {
   color: #666666; }
-  .about .container {
-    padding-top: 75px;
-    padding-bottom: 110px;
-    padding-left: 302px;
-    position: relative; }
-    .about .container::before {
-      content: "";
-      position: absolute;
-      height: 302px;
-      width: 156px;
-      background-image: url("../img/number@1x.png");
-      background-repeat: no-repeat;
-      background-position: center;
-      top: 88px;
-      left: 125px; }
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-        .about .container::before {
-          background-image: url("../img/number@2x.png");
-          background-size: 95%;
-          left: 105px; } }
   .about h2 {
     margin: 0;
     padding: 0;
@@ -884,7 +869,28 @@ a {
     padding: 0;
     font-size: 16px;
     line-height: 22px;
-    font-family: "PT Mono", sans-serif; }
+    font-family: "PT Mono", Arial, monospace; }
+
+.about .container {
+  padding-top: 75px;
+  padding-bottom: 110px;
+  padding-left: 302px;
+  position: relative; }
+  .about .container::before {
+    content: "";
+    position: absolute;
+    height: 302px;
+    width: 156px;
+    background-image: url("../img/number@1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 88px;
+    left: 125px; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      .about .container::before {
+        background-image: url("../img/number@2x.png");
+        background-size: 95%;
+        left: 105px; } }
 
 .about__link {
   display: block;
@@ -905,16 +911,6 @@ a {
     color: #666666; }
 
 @media (max-width: 1023px) {
-  .about .container {
-    padding-top: 25px;
-    padding-bottom: 83px;
-    padding-left: 185px; }
-    .about .container::before {
-      height: 361px;
-      width: 177px;
-      background-size: cover;
-      top: 25px;
-      left: 5px; }
   .about h2 {
     font-size: 32px;
     line-height: 45px; }
@@ -931,18 +927,22 @@ a {
         position: absolute;
         bottom: 0;
         right: 0; }
+  .about .container {
+    padding-top: 25px;
+    padding-bottom: 83px;
+    padding-left: 185px; }
+    .about .container::before {
+      height: 361px;
+      width: 177px;
+      background-size: cover;
+      top: 25px;
+      left: 5px; }
   .about__link {
     padding: 13px 0;
     margin-top: 42px;
     margin-left: 4px; } }
 
 @media (max-width: 767px) {
-  .about .container {
-    padding-top: 36px;
-    padding-bottom: 65px;
-    padding-left: 4px; }
-    .about .container::before {
-      display: none; }
   .about h2 {
     font-size: 28px;
     line-height: 39px; }
@@ -953,6 +953,12 @@ a {
       .about p:last-of-type::before {
         bottom: 0;
         left: 135px; }
+  .about .container {
+    padding-top: 36px;
+    padding-bottom: 65px;
+    padding-left: 4px; }
+    .about .container::before {
+      display: none; }
   .about__link {
     margin-top: 29px; } }
 
@@ -961,8 +967,6 @@ a {
   padding-top: 88px;
   padding-bottom: 127px;
   color: #ffffff; }
-  .services .container {
-    max-width: 1170px; }
   .services p {
     margin: 0;
     margin-bottom: 52px;
@@ -970,6 +974,9 @@ a {
     font-weight: normal;
     font-size: 36px;
     line-height: 51px; }
+
+.services .container {
+  max-width: 1170px; }
 
 .services__list {
   list-style: none;
@@ -1040,13 +1047,13 @@ a {
   .services {
     padding-top: 50px;
     padding-bottom: 78px; }
-    .services .container {
-      max-width: 719px; }
     .services p {
       margin-bottom: 50px;
       font-size: 32px;
       line-height: 45px;
       max-width: 613px; }
+  .services .container {
+    max-width: 719px; }
   .services__list {
     display: flex;
     flex-direction: column;
@@ -1095,13 +1102,13 @@ a {
   .services {
     padding-top: 51px;
     padding-bottom: 64px; }
-    .services .container {
-      max-width: 290px; }
     .services p {
       margin-bottom: 43px;
       margin-left: 10px;
       font-size: 28px;
       line-height: 39px; }
+  .services .container {
+    max-width: 290px; }
   .services__list {
     gap: 30px; }
   .services__item {
@@ -1123,32 +1130,6 @@ a {
   padding-bottom: 113px;
   color: #ffffff;
   overflow: hidden; }
-  .feedback .container {
-    max-width: 1170px;
-    position: relative; }
-    .feedback .container::before {
-      content: "";
-      position: absolute;
-      width: 511px;
-      height: 288px;
-      top: 70px;
-      left: -25px;
-      background-image: url("../img/paper-airplane@1x.png");
-      background-repeat: no-repeat;
-      z-index: 1; }
-      @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
-        .feedback .container::before {
-          background-image: url("../img/paper-airplane@2x.png");
-          background-size: 100%; } }
-    .feedback .container::after {
-      content: "";
-      position: absolute;
-      width: 670px;
-      height: 640px;
-      top: -150px;
-      left: -200px;
-      background-image: url("../img/triangles.svg");
-      background-repeat: no-repeat; }
   .feedback p {
     font-weight: normal;
     font-size: 36px;
@@ -1156,7 +1137,7 @@ a {
     margin: 0;
     padding: 0; }
     .feedback p:last-of-type {
-      font-family: "PT Mono", sans-serif;
+      font-family: "PT Mono", Arial, monospace;
       margin-left: 4px;
       font-weight: normal;
       font-size: 16px;
@@ -1201,21 +1182,48 @@ a {
     padding-left: 16px;
     padding-top: 13px;
     color: #ffffff;
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", Arial, monospace;
     resize: none;
     outline: none; }
     .feedback textarea:focus {
       border: 1px solid #ffffff; }
     .feedback textarea::-moz-placeholder {
       color: #ffffff;
-      font-family: "PT Mono", sans-serif;
+      font-family: "PT Mono", Arial, monospace;
       font-size: 16px;
       line-height: 22px; }
     .feedback textarea::placeholder {
       color: #ffffff;
-      font-family: "PT Mono", sans-serif;
+      font-family: "PT Mono", Arial, monospace;
       font-size: 16px;
       line-height: 22px; }
+
+.feedback .container {
+  max-width: 1170px;
+  position: relative; }
+  .feedback .container::before {
+    content: "";
+    position: absolute;
+    width: 511px;
+    height: 288px;
+    top: 70px;
+    left: -25px;
+    background-image: url("../img/paper-airplane@1x.png");
+    background-repeat: no-repeat;
+    z-index: 1; }
+    @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+      .feedback .container::before {
+        background-image: url("../img/paper-airplane@2x.png");
+        background-size: 100%; } }
+  .feedback .container::after {
+    content: "";
+    position: absolute;
+    width: 670px;
+    height: 640px;
+    top: -150px;
+    left: -200px;
+    background-image: url("../img/triangles.svg");
+    background-repeat: no-repeat; }
 
 .feedback__wrapper {
   margin-left: auto;
@@ -1232,20 +1240,20 @@ a {
   padding-left: 17px;
   margin-bottom: 40px;
   color: #ffffff;
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", Arial, monospace;
   outline: none; }
   .feedback__name input:focus,
   .feedback__phone input:focus {
     border: 1px solid #ffffff; }
   .feedback__name input::-moz-placeholder, .feedback__phone input::-moz-placeholder {
     color: #ffffff;
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", Arial, monospace;
     font-size: 16px;
     line-height: 22px; }
   .feedback__name input::placeholder,
   .feedback__phone input::placeholder {
     color: #ffffff;
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", Arial, monospace;
     font-size: 16px;
     line-height: 22px; }
 
@@ -1271,7 +1279,7 @@ a {
 
 .feedback__label {
   position: relative;
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", Arial, monospace;
   font-size: 14px;
   line-height: 16px;
   max-width: 230px; }
@@ -1316,10 +1324,6 @@ a {
   .feedback {
     padding-top: 78px;
     padding-bottom: 103px; }
-    .feedback .container {
-      max-width: 750px; }
-      .feedback .container::before, .feedback .container::after {
-        display: none; }
     .feedback p {
       font-size: 32px;
       line-height: 45px;
@@ -1334,6 +1338,10 @@ a {
       min-height: 159px;
       margin-bottom: 46px;
       padding-left: 17px; }
+  .feedback .container {
+    max-width: 750px; }
+    .feedback .container::before, .feedback .container::after {
+      display: none; }
   .feedback__wrapper {
     margin-right: auto;
     max-width: 595px; }
@@ -1356,8 +1364,6 @@ a {
   .feedback {
     padding-top: 31px;
     padding-bottom: 42px; }
-    .feedback .container {
-      max-width: 290px; }
     .feedback p {
       font-size: 28px;
       line-height: 39px;
@@ -1371,6 +1377,8 @@ a {
       min-height: 104px;
       margin-bottom: 32px;
       padding-left: 17px; }
+  .feedback .container {
+    max-width: 290px; }
   .feedback__wrapper {
     max-width: 290px; }
   .feedback__submit {
@@ -1392,13 +1400,14 @@ a {
 .footer {
   position: relative;
   overflow-x: hidden; }
-  .footer .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 64px;
-    color: #1b2d37; }
+
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 64px;
+  color: #1b2d37; }
 
 @media (max-width: 1023px) {
   .footer .container {
@@ -1436,7 +1445,7 @@ a {
       margin-top: 5px;
       margin-left: 15px;
       display: block;
-      font-family: "PT Mono", sans-serif;
+      font-family: "PT Mono", Arial, monospace;
       font-size: 13px;
       line-height: 24px;
       letter-spacing: 0.04em;
@@ -1491,7 +1500,7 @@ a {
     text-transform: uppercase; }
 
 .site-nav__list {
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", Arial, monospace;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1592,7 +1601,7 @@ a {
     letter-spacing: 0.05em; }
 
 .contacts__list {
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", Arial, monospace;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1681,7 +1690,7 @@ a {
   justify-content: space-between;
   flex-grow: 1;
   align-items: center;
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", Arial, monospace;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   font-size: 13px;
@@ -1751,7 +1760,7 @@ a {
     margin: 0;
     padding: 0; }
     .callback-popup p:last-of-type {
-      font-family: "PT Mono", sans-serif;
+      font-family: "PT Mono", Arial, monospace;
       font-size: 16px;
       line-height: 22px;
       margin-top: 18px;
@@ -1768,19 +1777,19 @@ a {
     padding-left: 24px;
     padding-top: 13px;
     color: #ffffff;
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", Arial, monospace;
     resize: none;
     outline: none; }
     .callback-popup textarea:focus {
       border: 1px solid #ffffff; }
     .callback-popup textarea::-moz-placeholder {
       color: #ffffff;
-      font-family: "PT Mono", sans-serif;
+      font-family: "PT Mono", Arial, monospace;
       font-size: 16px;
       line-height: 22px; }
     .callback-popup textarea::placeholder {
       color: #ffffff;
-      font-family: "PT Mono", sans-serif;
+      font-family: "PT Mono", Arial, monospace;
       font-size: 16px;
       line-height: 22px; }
 
@@ -1806,20 +1815,20 @@ a {
   padding-left: 24px;
   margin-bottom: 30px;
   color: #ffffff;
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", Arial, monospace;
   outline: none; }
   .callback-popup__name input:focus,
   .callback-popup__phone input:focus {
     border: 1px solid #ffffff; }
   .callback-popup__name input::-moz-placeholder, .callback-popup__phone input::-moz-placeholder {
     color: #ffffff;
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", Arial, monospace;
     font-size: 16px;
     line-height: 22px; }
   .callback-popup__name input::placeholder,
   .callback-popup__phone input::placeholder {
     color: #ffffff;
-    font-family: "PT Mono", sans-serif;
+    font-family: "PT Mono", Arial, monospace;
     font-size: 16px;
     line-height: 22px; }
 
@@ -1846,7 +1855,7 @@ a {
 
 .callback-popup__label {
   position: relative;
-  font-family: "PT Mono", sans-serif;
+  font-family: "PT Mono", Arial, monospace;
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 36px;

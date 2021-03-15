@@ -60,21 +60,25 @@ let maskPhone = (selector, masked = '+7 (___) ___-__-__') => {
   }
 };
 
-maskPhone('input[type="tel"]');
+if (document.querySelector('input[type="tel"]')) {
+  maskPhone('input[type="tel"]');
+}
 
 /*Scroll*/
 
 if (anchors) {
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
-      e.preventDefault()
+      e.preventDefault();
 
-      const blockID = anchor.getAttribute('href').substr(1)
+      const blockID = anchor.getAttribute('href').substr(1);
 
-      document.getElementById(blockID).scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-      })
+      if (blockID) {
+        document.getElementById(blockID).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
     })
   }
 }
@@ -82,13 +86,25 @@ if (anchors) {
 /* Footer Accordeon */
 
 if (accordeonBlocks) {
+  let activePanel;
+
   accordeonBlocks.forEach((block) => {
     block.classList.remove('accordeon--nojs');
 
-  const toggleButton = block.querySelector('.accordeon button');
+    if (!block.classList.contains('accordeon--closed')) {
+      activePanel = block;
+    }
 
-  toggleButton.addEventListener('click', function() {
-      block.classList.toggle('accordeon--closed');
+    const toggleButton = block.querySelector('.accordeon button');
+
+    toggleButton.addEventListener('click', function() {
+      if (block.classList.contains('accordeon--closed')) {
+        block.classList.remove('accordeon--closed');
+        activePanel.classList.add('accordeon--closed');
+        activePanel = block;
+      } else {
+        block.classList.add('accordeon--closed');
+      }
     });
   });
 }
@@ -107,7 +123,8 @@ if (callbackButton) {
     callbackNameInput.focus();
   };
 
-  callbackButton.addEventListener('click', function() {
+  callbackButton.addEventListener('click', function(evt) {
+    evt.preventDefault();
     showPopup();
   });
 

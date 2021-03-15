@@ -48,7 +48,7 @@
   p {
     font-size: 22px;
     line-height: 34px;
-    font-family: "PT Mono", sans-serif;
+    font-family: $ptmono;
     max-width: 683px;
     margin: 0;
     margin-left: 94px;
@@ -102,7 +102,7 @@
 }
 
 .main-block__scroll {
-  font-family: "PT Mono", sans-serif;
+  font-family: $ptmono;
   font-size: 14px;
   line-height: 16px;
   opacity: 0.5;

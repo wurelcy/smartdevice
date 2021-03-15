@@ -20,7 +20,9 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(
+        overrideBrowsersList: ["last 5 versions"],
+      )
     ]))
     .pipe(gulp.dest("build/css"))
     .pipe(csso())

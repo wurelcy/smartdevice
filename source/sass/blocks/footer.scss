@@ -1,29 +1,25 @@
 .footer {
   position: relative;
   overflow-x: hidden;
+}
 
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 64px;
-    color: $darkest;
-  }
+.footer .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 64px;
+  color: $darkest;
 }
 
 @media (max-width: $tablet-width) {
-  .footer {
-    .container {
+  .footer .container {
       padding-top: 19px;
-    }
   }
 }
 
 @media (max-width: $mobile-width-only) {
-  .footer {
-    .container {
+  .footer .container {
       padding-top: 46px;
-    }
   }
 }

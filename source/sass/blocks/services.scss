@@ -4,10 +4,6 @@
   padding-bottom: 127px;
   color: $white;
 
-  .container {
-    max-width: 1170px;
-  }
-
   p {
     margin: 0;
     margin-bottom: 52px;
@@ -16,6 +12,10 @@
     font-size: 36px;
     line-height: 51px;
   }
+}
+
+.services .container {
+  max-width: 1170px;
 }
 
 .services__list {
@@ -103,16 +103,16 @@
     padding-top: 50px;
     padding-bottom: 78px;
 
-    .container {
-      max-width: 719px;
-    }
-
     p {
       margin-bottom: 50px;
       font-size: 32px;
       line-height: 45px;
       max-width: 613px;
     }
+  }
+
+  .services .container {
+    max-width: 719px;
   }
 
   .services__list {
@@ -173,16 +173,16 @@
     padding-top: 51px;
     padding-bottom: 64px;
 
-    .container {
-      max-width: 290px;
-    }
-
     p {
       margin-bottom: 43px;
       margin-left: 10px;
       font-size: 28px;
       line-height: 39px;
     }
+  }
+
+  .services .container {
+    max-width: 290px;
   }
 
   .services__list {
