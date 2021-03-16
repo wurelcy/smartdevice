@@ -2,134 +2,27 @@
   margin-right: 3px;
 }
 
-.contacts h2 {
-  margin: 0;
-  margin-bottom: 25px;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 16px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.contacts__list {
-  font-family: $ptmono;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 15px;
-  line-height: 25px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  color: rgba($darkest, 0.5);
-  max-height: 100px;
-}
-
-.contacts__button {
-  display: none;
-}
-
-.contacts__link {
-  &:hover,
-  &:focus {
-    color: $darkest;
-  }
-
-  &:active {
-    color: rgba($darkest, 0.2);
-  }
-}
-
 @media (max-width: $tablet-width) {
   .contacts {
     align-self: flex-start;
     margin-right: 8px;
   }
 
-  .contacts__list {
+  .contacts .accordeon__list {
     margin-right: 3px;
   }
 }
 
 @media (max-width: $mobile-width-only) {
-  .contacts {
-    position: relative;
-
-    &::after {
-      content: "";
-      position: absolute;
-      min-width: 768px;
-      height: 1px;
-      background-color: rgba($border, 0.2);
-      left: -50%;
-      bottom: 0;
-    }
-  }
-
   .contacts h2 {
-    margin: 27px 0;
     margin-bottom: 31px;
-    margin-left: 5px;
   }
 
-  .contacts__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 290px;
-  }
-
-  .contacts__list {
+  .contacts .accordeon__list {
     max-height: 125px;
     margin-left: 5px;
     margin-bottom: 30px;
     max-width: 270px;
-  }
-
-  .contacts__button {
-    display: block;
-    outline: none;
-    border: 0;
-    width: 17px;
-    cursor: pointer;
-    background: transparent;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 17px;
-      height: 1px;
-      background-color: $icon;
-      right: 0;
-      top: -1px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      display: none;
-      width: 17px;
-      height: 1px;
-      background-color: $icon;
-      right: 0;
-      top: -1px;
-      transform: rotate(90deg);
-    }
-  }
-
-  .accordeon--closed {
-    .contacts__list {
-      display: none;
-    }
-
-    .contacts__button {
-      &::after {
-        display: block;
-      }
-    }
   }
 
   .contacts__item {

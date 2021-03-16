@@ -3,49 +3,12 @@
   min-height: 143px;
 }
 
-.site-nav h2 {
-  margin: 0;
-  margin-bottom: 24px;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 16px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.site-nav__list {
-  font-family: $ptmono;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 15px;
-  line-height: 25px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  color: rgba($darkest, 0.5);
-  max-height: 100px;
+.site-nav .accordeon__list {
   max-width: 516px;
 }
 
 .site-nav__item {
   margin-right: 74px;
-}
-
-.site-nav__button {
-  display: none;
-}
-
-.site-nav__link {
-  &:hover,
-  &:focus {
-    color: $darkest;
-  }
-
-  &:active {
-    color: rgba($darkest, 0.2);
-  }
 }
 
 @media (max-width: $tablet-width) {
@@ -59,7 +22,7 @@
     margin-bottom: 25px;
   }
 
-  .site-nav__list {
+  .site-nav .accordeon__list {
     max-height: 100%;
     margin-right: 0;
   }
@@ -71,77 +34,6 @@
 
 @media (max-width: $mobile-width-only) {
   .site-nav {
-    position: relative;
     min-height: auto;
-
-    &::after {
-      content: "";
-      position: absolute;
-      min-width: 768px;
-      height: 1px;
-      background-color: rgba($border, 0.2);
-      left: -50%;
-      bottom: 0;
-    }
-  }
-
-  .site-nav h2 {
-    margin: 29px 0;
-    margin-left: 5px;
-  }
-
-  .site-nav__button {
-    display: block;
-    outline: none;
-    border: 0;
-    width: 17px;
-    cursor: pointer;
-    background: transparent;
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      width: 17px;
-      height: 1px;
-      background-color: $icon;
-      right: 0;
-      top: -1px;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      display: none;
-      width: 17px;
-      height: 1px;
-      background-color: $icon;
-      right: 0;
-      top: -1px;
-      transform: rotate(90deg);
-    }
-  }
-
-  .accordeon--closed {
-    .site-nav__list {
-      display: none;
-    }
-
-    .site-nav__button {
-      &::after {
-        display: block;
-      }
-    }
-  }
-
-  .site-nav__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-width: 290px;
-  }
-
-  .site-nav__item {
-    margin-right: 0;
   }
 }
