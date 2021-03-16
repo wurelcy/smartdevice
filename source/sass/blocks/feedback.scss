@@ -4,118 +4,118 @@
   padding-bottom: 113px;
   color: $white;
   overflow: hidden;
+}
 
-  p {
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 51px;
-    margin: 0;
-    padding: 0;
+.feedback p {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 51px;
+  margin: 0;
+  padding: 0;
 
-    &:last-of-type {
-      font-family: $ptmono;
-      margin-left: 4px;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 22px;
-      margin-top: 10px;
-    }
-  }
-
-  form {
-    margin-top: 50px;
-    display: flex;
+  &:last-of-type {
+    font-family: $ptmono;
     margin-left: 4px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    position: relative;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 10px;
+  }
+}
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 264px;
-      height: 290px;
-      top: -130px;
-      right: -362px;
-      opacity: 0.3;
-      background-image: url("../img/small-triangle-left.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
+.feedback form {
+  margin-top: 50px;
+  display: flex;
+  margin-left: 4px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: 473px;
-      height: 400px;
-      top: 90px;
-      right: -495px;
-      opacity: 0.3;
-      background-image: url("../img/small-triangle-left.svg");
-      background-repeat: no-repeat;
-      background-size: contain;
-      transform: rotate(60deg);
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    width: 264px;
+    height: 290px;
+    top: -130px;
+    right: -362px;
+    opacity: 0.3;
+    background-image: url("../img/small-triangle-left.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 
-  textarea {
-    flex-grow: 1;
-    min-height: 154px;
-    margin-bottom: 44px;
-    border: 0;
-    background-color: rgba($white, 0.1);
-    padding-left: 16px;
-    padding-top: 13px;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 473px;
+    height: 400px;
+    top: 90px;
+    right: -495px;
+    opacity: 0.3;
+    background-image: url("../img/small-triangle-left.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(60deg);
+  }
+}
+
+.feedback textarea {
+  flex-grow: 1;
+  min-height: 154px;
+  margin-bottom: 44px;
+  border: 0;
+  background-color: rgba($white, 0.1);
+  padding-left: 16px;
+  padding-top: 13px;
+  color: $white;
+  font-family: $ptmono;
+  resize: none;
+  outline: none;
+
+  &:focus {
+    border: 1px solid $white;
+  }
+
+  &::placeholder {
     color: $white;
     font-family: $ptmono;
-    resize: none;
-    outline: none;
-
-    &:focus {
-      border: 1px solid $white;
-    }
-
-    &::placeholder {
-      color: $white;
-      font-family: $ptmono;
-      font-size: 16px;
-      line-height: 22px;
-    }
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
 .feedback .container {
-    max-width: 1170px;
-    position: relative;
+  max-width: 1170px;
+  position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      width: 511px;
-      height: 288px;
-      top: 70px;
-      left: -25px;
-      background-image: url("../img/paper-airplane@1x.png");
-      background-repeat: no-repeat;
-      z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 511px;
+    height: 288px;
+    top: 70px;
+    left: -25px;
+    background-image: url("../img/paper-airplane@1x.png");
+    background-repeat: no-repeat;
+    z-index: 1;
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/paper-airplane@2x.png");
-        background-size: 100%;
-      }
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      width: 670px;
-      height: 640px;
-      top: -150px;
-      left: -200px;
-      background-image: url("../img/triangles.svg");
-      background-repeat: no-repeat;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/paper-airplane@2x.png");
+      background-size: 100%;
     }
   }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 670px;
+    height: 640px;
+    top: -150px;
+    left: -200px;
+    background-image: url("../img/triangles.svg");
+    background-repeat: no-repeat;
+  }
+}
 
 .feedback__wrapper {
   margin-left: auto;
@@ -123,30 +123,28 @@
   max-width: 574px;
 }
 
-.feedback__name,
-.feedback__phone {
-  input {
-    height: 50px;
-    min-width: 270px;
-    border: 0;
-    background-color: rgba($white, 0.1);
-    padding: 13px;
-    padding-left: 17px;
-    margin-bottom: 40px;
+.feedback__name input,
+.feedback__phone input {
+  height: 50px;
+  min-width: 270px;
+  border: 0;
+  background-color: rgba($white, 0.1);
+  padding: 13px;
+  padding-left: 17px;
+  margin-bottom: 40px;
+  color: $white;
+  font-family: $ptmono;
+  outline: none;
+
+  &:focus {
+    border: 1px solid $white;
+  }
+
+  &::placeholder {
     color: $white;
     font-family: $ptmono;
-    outline: none;
-
-    &:focus {
-      border: 1px solid $white;
-    }
-
-    &::placeholder {
-      color: $white;
-      font-family: $ptmono;
-      font-size: 16px;
-      line-height: 22px;
-    }
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -189,48 +187,48 @@
   justify-content: space-between;
   align-items: center;
   flex-grow: 1;
+}
 
-  input {
-    & + label::before {
-      position: absolute;
-      content: "";
-      width: 16px;
-      height: 16px;
-      background-color: transparent;
-      border: 1px solid $white;
-      left: -32px;
-      top: 2px;
-    }
+.feedback__button-block input {
+  & + label::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 1px solid $white;
+    left: -32px;
+    top: 2px;
+  }
 
-    &:hover + label::before,
-    &:focus + label::before {
-      border-color: $darkest;
-    }
+  &:hover + label::before,
+  &:focus + label::before {
+    border-color: $darkest;
+  }
 
-    &:active + label::before {
-      border-color: $darkest;
-    }
+  &:active + label::before {
+    border-color: $darkest;
+  }
 
-    & + label::after {
-      display: none;
-      position: absolute;
-      content: "";
-      left: -28px;
-      top: 7px;
-      height: 5px;
-      width: 8px;
-      background-color: $white;
-      mask: url("../img/icon-check.svg");
-    }
+  & + label::after {
+    display: none;
+    position: absolute;
+    content: "";
+    left: -28px;
+    top: 7px;
+    height: 5px;
+    width: 8px;
+    background-color: $white;
+    mask: url("../img/icon-check.svg");
+  }
 
-    &:hover + label::after,
-    &:focus + label::after {
-      background-color: $darkest;
-    }
+  &:hover + label::after,
+  &:focus + label::after {
+    background-color: $darkest;
+  }
 
-    &:checked + label::after {
-      display: block;
-    }
+  &:checked + label::after {
+    display: block;
   }
 }
 
@@ -238,31 +236,31 @@
   .feedback {
     padding-top: 78px;
     padding-bottom: 103px;
+  }
 
-    p {
-      font-size: 32px;
-      line-height: 45px;
-      margin-bottom: 18px;
+  .feedback p {
+    font-size: 32px;
+    line-height: 45px;
+    margin-bottom: 18px;
 
-      &:last-of-type {
-        margin-left: 6px;
-      }
+    &:last-of-type {
+      margin-left: 6px;
     }
+  }
 
-    form {
-      margin-top: 55px;
+  .feedback form {
+    margin-top: 55px;
 
-      &::before,
-      &::after {
-        display: none;
-      }
+    &::before,
+    &::after {
+      display: none;
     }
+  }
 
-    textarea {
-      min-height: 159px;
-      margin-bottom: 46px;
-      padding-left: 17px;
-    }
+  .feedback textarea {
+    min-height: 159px;
+    margin-bottom: 46px;
+    padding-left: 17px;
   }
 
   .feedback .container {
@@ -283,26 +281,22 @@
     min-width: 279px;
   }
 
-  .feedback__button-block {
-    input {
-      & + label::before {
-        left: -33px;
-      }
+  .feedback__button-block input {
+    & + label::before {
+      left: -33px;
+    }
 
-      & + label::after {
-        left: -29px;
-      }
+    & + label::after {
+      left: -29px;
     }
   }
 
-  .feedback__name,
-  .feedback__phone {
-    input {
-      height: 51px;
-      min-width: 279px;
-      padding-left: 17px;
-      margin-bottom: 41px;
-    }
+  .feedback__name input,
+  .feedback__phone input {
+    height: 51px;
+    min-width: 279px;
+    padding-left: 17px;
+    margin-bottom: 41px;
   }
 
   .feedback__label {
@@ -314,27 +308,27 @@
   .feedback {
     padding-top: 31px;
     padding-bottom: 42px;
+  }
 
-    p {
-      font-size: 28px;
-      line-height: 39px;
-      margin-bottom: 12px;
+  .feedback p {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 12px;
 
-      &:last-of-type {
-        margin-left: 0;
-      }
-    }
-
-    form {
-      margin-top: 26px;
+    &:last-of-type {
       margin-left: 0;
     }
+  }
 
-    textarea {
-      min-height: 104px;
-      margin-bottom: 32px;
-      padding-left: 17px;
-    }
+  .feedback form {
+    margin-top: 26px;
+    margin-left: 0;
+  }
+
+  .feedback textarea {
+    min-height: 104px;
+    margin-bottom: 32px;
+    padding-left: 17px;
   }
 
   .feedback .container {
@@ -350,12 +344,10 @@
     margin-bottom: 30px;
   }
 
-  .feedback__name,
-  .feedback__phone {
-    input {
-      min-width: 290px;
-      margin-bottom: 30px;
-    }
+  .feedback__name input,
+  .feedback__phone input {
+    min-width: 290px;
+    margin-bottom: 30px;
   }
 
   .feedback__label {
@@ -364,15 +356,15 @@
 
   .feedback__button-block {
     flex-direction: column;
+  }
 
-    input {
-      & + label::before {
-        left: -34px;
-      }
+  .feedback__button-block input {
+    & + label::before {
+      left: -34px;
+    }
 
-      & + label::after {
-        left: -30px;
-      }
+    & + label::after {
+      left: -30px;
     }
   }
 }

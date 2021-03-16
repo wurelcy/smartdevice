@@ -9,10 +9,6 @@
 }
 
 .social-list__link {
-  svg {
-    fill: $social;
-  }
-
   &:hover,
   &:focus {
     svg {
@@ -25,6 +21,10 @@
       opacity: 0.3;
     }
   }
+}
+
+.social-list__link svg {
+  fill: $social;
 }
 
 @media (max-width: $tablet-width) {

@@ -20,11 +20,11 @@
     left: 0;
     bottom: 52px;
   }
+}
 
-  p {
-    &:last-child {
-      margin-right: 5px;
-    }
+.copyright p {
+  &:last-child {
+    margin-right: 5px;
   }
 }
 
@@ -46,11 +46,11 @@
   justify-content: space-between;
   min-width: 457px;
   align-items: center;
+}
 
-  p {
-    &:last-child {
-      margin-right: 0;
-    }
+.copyright__wrapper p {
+  &:last-child {
+    margin-right: 0;
   }
 }
 
@@ -58,14 +58,14 @@
   .copyright {
     margin-top: 47px;
 
-    p {
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
     &::before {
       bottom: 58px;
+    }
+  }
+
+  .copyright p {
+    &:last-child {
+      margin-right: 0;
     }
   }
 

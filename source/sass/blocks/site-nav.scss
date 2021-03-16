@@ -1,16 +1,16 @@
 .site-nav {
   margin-right: 142px;
   min-height: 143px;
+}
 
-  h2 {
-    margin: 0;
-    margin-bottom: 24px;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 16px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
+.site-nav h2 {
+  margin: 0;
+  margin-bottom: 24px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .site-nav__list {
@@ -52,11 +52,11 @@
   .site-nav {
     position: relative;
     margin-right: 0;
+  }
 
-    h2 {
-      margin-left: 2px;
-      margin-bottom: 25px;
-    }
+  .site-nav h2 {
+    margin-left: 2px;
+    margin-bottom: 25px;
   }
 
   .site-nav__list {
@@ -83,18 +83,18 @@
       left: -50%;
       bottom: 0;
     }
+  }
 
-    h2 {
-      margin: 29px 0;
-      margin-left: 5px;
-    }
+  .site-nav h2 {
+    margin: 29px 0;
+    margin-left: 5px;
   }
 
   .site-nav__button {
     display: block;
     outline: none;
     border: 0;
-    width: 16px;
+    width: 17px;
     cursor: pointer;
     background: transparent;
     position: relative;
@@ -102,11 +102,23 @@
     &::before {
       content: "";
       position: absolute;
-      width: 16px;
+      width: 17px;
       height: 1px;
       background-color: $icon;
-      right: -13px;
-      top: -5px;
+      right: 0;
+      top: -1px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      width: 17px;
+      height: 1px;
+      background-color: $icon;
+      right: 0;
+      top: -1px;
+      transform: rotate(90deg);
     }
   }
 
@@ -116,14 +128,8 @@
     }
 
     .site-nav__button {
-      &::before {
-        content: "";
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        mask: url("../img/icon-plus.svg");
-        right: -12px;
-        top: -8px;
+      &::after {
+        display: block;
       }
     }
   }
@@ -132,7 +138,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 280px;
+    min-width: 290px;
   }
 
   .site-nav__item {

@@ -20,10 +20,10 @@
   padding-top: 20px;
   padding-bottom: 229px;
   color: $white;
+}
 
-  img {
-    width: 202px;
-  }
+.header__wrapper img {
+  width: 202px;
 }
 
 .header__contacts {
@@ -68,10 +68,6 @@
   font-size: 16px;
   line-height: 18px;
 
-  svg {
-    margin-right: 11px;
-  }
-
   &:focus,
   &:hover {
     opacity: 0.7;
@@ -82,12 +78,14 @@
   }
 }
 
-.header__phone-wrapper {
-  svg {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 6px;
-  }
+.header__contact svg {
+  margin-right: 11px;
+}
+
+.header__phone-wrapper svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
 }
 
 @media (max-width: $tablet-width) {
@@ -107,22 +105,20 @@
     min-width: 83px;
     margin-right: 0;
 
-    &:first-child {
-      svg {
-        width: 25px;
-        height: 18px;
-      }
+    &:first-child svg {
+      width: 25px;
+      height: 18px;
     }
+  }
 
-    svg {
-      width: 24px;
-      height: 24px;
-      margin-right: 0;
-    }
+  .header__contacts svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 0;
+  }
 
-    span {
-      display: none;
-    }
+  .header__contacts span {
+    display: none;
   }
 }
 
@@ -132,21 +128,19 @@
     min-width: 78px;
   }
 
-  .header__phone-wrapper {
-    svg {
-      display: inline-block;
-      vertical-align: baseline;
-      margin-right: 5px;
-    }
+  .header__phone-wrapper svg {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 5px;
   }
 
   .header__wrapper {
     padding-top: 15px;
     padding-bottom: 232px;
+  }
 
-    img {
-      margin-left: 8px;
-      width: 38px;
-    }
+  .header__wrapper img {
+    margin-left: 8px;
+    width: 38px;
   }
 }

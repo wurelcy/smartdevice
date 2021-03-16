@@ -1,15 +1,15 @@
 .contacts {
   margin-right: 3px;
+}
 
-  h2 {
-    margin: 0;
-    margin-bottom: 25px;
-    font-weight: normal;
-    font-size: 15px;
-    line-height: 16px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
+.contacts h2 {
+  margin: 0;
+  margin-bottom: 25px;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .contacts__list {
@@ -57,12 +57,6 @@
   .contacts {
     position: relative;
 
-    h2 {
-      margin: 27px 0;
-      margin-bottom: 31px;
-      margin-left: 5px;
-    }
-
     &::after {
       content: "";
       position: absolute;
@@ -74,11 +68,17 @@
     }
   }
 
+  .contacts h2 {
+    margin: 27px 0;
+    margin-bottom: 31px;
+    margin-left: 5px;
+  }
+
   .contacts__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-width: 280px;
+    min-width: 290px;
   }
 
   .contacts__list {
@@ -92,7 +92,7 @@
     display: block;
     outline: none;
     border: 0;
-    width: 16px;
+    width: 17px;
     cursor: pointer;
     background: transparent;
     position: relative;
@@ -100,11 +100,23 @@
     &::before {
       content: "";
       position: absolute;
-      width: 16px;
+      width: 17px;
       height: 1px;
       background-color: $icon;
-      right: -12px;
+      right: 0;
       top: -1px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+      width: 17px;
+      height: 1px;
+      background-color: $icon;
+      right: 0;
+      top: -1px;
+      transform: rotate(90deg);
     }
   }
 
@@ -114,14 +126,8 @@
     }
 
     .contacts__button {
-      &::before {
-        content: "";
-        position: absolute;
-        mask: url("../img/icon-plus.svg");
-        width: 16px;
-        height: 16px;
-        right: -12px;
-        top: -7px;
+      &::after {
+        display: block;
       }
     }
   }

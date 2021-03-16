@@ -6,50 +6,50 @@
   color: $white;
   padding: 0 39px;
   padding-top: 28px;
+}
 
-  p {
-    font-size: 28px;
-    line-height: 39px;
-    margin: 0;
-    padding: 0;
+.callback-popup p {
+  font-size: 28px;
+  line-height: 39px;
+  margin: 0;
+  padding: 0;
 
-    &:last-of-type {
-      font-family: $ptmono;
-      font-size: 16px;
-      line-height: 22px;
-      margin-top: 18px;
-      margin-bottom: 34px;
-      max-width: 370px;
-    }
+  &:last-of-type {
+    font-family: $ptmono;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 18px;
+    margin-bottom: 34px;
+    max-width: 370px;
+  }
+}
+
+.callback-popup form {
+  display: flex;
+  flex-direction: column;
+}
+
+.callback-popup textarea {
+  min-height: 104px;
+  margin-bottom: 30px;
+  border: 0;
+  background-color: rgba($white, 0.1);
+  padding-left: 24px;
+  padding-top: 13px;
+  color: $white;
+  font-family: $ptmono;
+  resize: none;
+  outline: none;
+
+  &:focus {
+    border: 1px solid $white;
   }
 
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-
-  textarea {
-    min-height: 104px;
-    margin-bottom: 30px;
-    border: 0;
-    background-color: rgba($white, 0.1);
-    padding-left: 24px;
-    padding-top: 13px;
+  &::placeholder {
     color: $white;
     font-family: $ptmono;
-    resize: none;
-    outline: none;
-
-    &:focus {
-      border: 1px solid $white;
-    }
-
-    &::placeholder {
-      color: $white;
-      font-family: $ptmono;
-      font-size: 16px;
-      line-height: 22px;
-    }
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -66,30 +66,28 @@
   cursor: pointer;
 }
 
-.callback-popup__name,
-.callback-popup__phone {
-  input {
-    height: 51px;
-    min-width: 100%;
-    border: 0;
-    background-color: rgba($white, 0.1);
-    padding: 13px;
-    padding-left: 24px;
-    margin-bottom: 30px;
+.callback-popup__name input,
+.callback-popup__phone input {
+  height: 51px;
+  min-width: 100%;
+  border: 0;
+  background-color: rgba($white, 0.1);
+  padding: 13px;
+  padding-left: 24px;
+  margin-bottom: 30px;
+  color: $white;
+  font-family: $ptmono;
+  outline: none;
+
+  &:focus {
+    border: 1px solid $white;
+  }
+
+  &::placeholder {
     color: $white;
     font-family: $ptmono;
-    outline: none;
-
-    &:focus {
-      border: 1px solid $white;
-    }
-
-    &::placeholder {
-      color: $white;
-      font-family: $ptmono;
-      font-size: 16px;
-      line-height: 22px;
-    }
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -133,47 +131,47 @@
   max-width: 320px;
   margin-left: auto;
   margin-right: 52px;
+}
 
-  input {
-    & + label::before {
-      position: absolute;
-      content: "";
-      width: 16px;
-      height: 16px;
-      background-color: transparent;
-      border: 1px solid $white;
-      left: -40px;
-      top: 2px;
-    }
+.callback-popup__personal-data input {
+  & + label::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: transparent;
+    border: 1px solid $white;
+    left: -40px;
+    top: 2px;
+  }
 
-    &:hover + label::before,
-    &:focus + label::before {
-      border-color: $darkest;
-    }
+  &:hover + label::before,
+  &:focus + label::before {
+    border-color: $darkest;
+  }
 
-    &:active + label::before {
-      border-color: $darkest;
-    }
+  &:active + label::before {
+    border-color: $darkest;
+  }
 
-    & + label::after {
-      display: none;
-      position: absolute;
-      content: "";
-      left: -36px;
-      top: 7px;
-      height: 5px;
-      width: 8px;
-      background-color: $white;
-      mask: url("../img/icon-check.svg");
-    }
+  & + label::after {
+    display: none;
+    position: absolute;
+    content: "";
+    left: -36px;
+    top: 7px;
+    height: 5px;
+    width: 8px;
+    background-color: $white;
+    mask: url("../img/icon-check.svg");
+  }
 
-    &:hover + label::after,
-    &:focus + label::after {
-      background-color: $darkest;
-    }
+  &:hover + label::after,
+  &:focus + label::after {
+    background-color: $darkest;
+  }
 
-    &:checked + label::after {
-      display: block;
-    }
+  &:checked + label::after {
+    display: block;
   }
 }
