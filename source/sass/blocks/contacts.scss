@@ -14,12 +14,8 @@
 }
 
 @media (max-width: $mobile-width-only) {
-  .contacts h2 {
-    margin-bottom: 31px;
-  }
-
   .contacts .accordeon__list {
-    max-height: 125px;
+    max-height: 100%;
     margin-left: 5px;
     margin-bottom: 30px;
     max-width: 270px;

@@ -70,8 +70,9 @@
     outline: none;
     border: 0;
     width: 17px;
+    height: 17px;
     cursor: pointer;
-    background: transparent;
+    background: none;
     position: relative;
 
     &::before {
@@ -81,7 +82,7 @@
       height: 1px;
       background-color: $icon;
       right: 0;
-      top: -1px;
+      top: 7px;
     }
 
     &::after {
@@ -92,7 +93,7 @@
       height: 1px;
       background-color: $icon;
       right: 0;
-      top: -1px;
+      top: 7px;
       transform: rotate(90deg);
     }
   }

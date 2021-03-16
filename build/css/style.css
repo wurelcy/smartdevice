@@ -1569,8 +1569,9 @@ a {
     outline: none;
     border: 0;
     width: 17px;
+    height: 17px;
     cursor: pointer;
-    background: transparent;
+    background: none;
     position: relative; }
     .accordeon__button::before {
       content: "";
@@ -1579,7 +1580,7 @@ a {
       height: 1px;
       background-color: #c4c4c4;
       right: 0;
-      top: -1px; }
+      top: 7px; }
     .accordeon__button::after {
       content: "";
       position: absolute;
@@ -1588,7 +1589,7 @@ a {
       height: 1px;
       background-color: #c4c4c4;
       right: 0;
-      top: -1px;
+      top: 7px;
       transform: rotate(90deg); }
   .accordeon--closed .accordeon__list {
     display: none; }
@@ -1635,10 +1636,8 @@ a {
     margin-right: 3px; } }
 
 @media (max-width: 767px) {
-  .contacts h2 {
-    margin-bottom: 31px; }
   .contacts .accordeon__list {
-    max-height: 125px;
+    max-height: 100%;
     margin-left: 5px;
     margin-bottom: 30px;
     max-width: 270px; }
