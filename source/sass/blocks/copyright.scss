@@ -9,7 +9,7 @@
   font-size: 13px;
   line-height: 24px;
   color: rgba($darkest, 0.5);
-  margin-top: 59px;
+  margin-top: 39px;
 
   &::before {
     content: "";
@@ -29,7 +29,8 @@
 }
 
 .copyright__confidentiality {
-  margin-right: 265px;
+  margin-right: auto;
+  margin-left: 142px;
 
   &:hover,
   &:focus {
@@ -51,6 +52,11 @@
 .copyright__wrapper p {
   &:last-child {
     margin-right: 0;
+  }
+}
+@media (max-width: 1069px) {
+  .copyright__confidentiality {
+    margin-left: auto;
   }
 }
 

@@ -16,6 +16,7 @@
 
 .services .container {
   max-width: 1170px;
+  //max-width: 1020px;
 }
 
 .services__list {
@@ -95,6 +96,12 @@
     top: 50%;
     left: 50%;
     transform: translate(0, -50%);
+  }
+}
+
+@media (max-width: 1175px) {
+  .services .container {
+    max-width: 1020px;
   }
 }
 
@@ -182,7 +189,7 @@
   }
 
   .services .container {
-    max-width: 290px;
+    width: 90%;
   }
 
   .services__list {

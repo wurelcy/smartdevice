@@ -33,7 +33,7 @@
                 </svg>
                 <span>+7 (495) 000 52 52</span>
               </a>
-              <a href="#" class="header__call-button">Заказать звонок</a>
+              <a href="modal.html" class="header__call-button">Заказать звонок</a>
             </div>
           </div>
         </div>
@@ -45,6 +45,7 @@
           <a href="#advantages" class="main-block__scroll">Скролл вниз</a>
         </section>
       </div>
+      <div class="overlay overlay--hidden"></div>
     </header>
     <main>
       <div class="page-body__wrapper">
@@ -130,11 +131,11 @@
                 <input type="text" placeholder="Имя" id="name" required>
               </div>
               <div class="feedback__phone">
-                <label for="tel" class="visually-hidden">Телефон</label>
-                <input type="tel" placeholder="Телефон" name="user-phone" id="tel" maxlength="18" required>
+                <label for="phone" class="visually-hidden">Телефон</label>
+                <input type="tel" placeholder="Телефон" name="user-phone" id="phone" maxlength="18" required>
               </div>
               <label for="question" class="visually-hidden">Ваш вопрос</label>
-              <textarea placeholder="Ваш вопрос" id="question" required></textarea>
+              <textarea placeholder="Ваш вопрос" id="question"></textarea>
               <div class="feedback__button-block">
                 <button type="submit" class="feedback__submit">Задать вопрос</button>
                 <input type="checkbox" id="personal-data" class="visually-hidden" checked required>
@@ -177,34 +178,38 @@
             </li>
           </ul>
         </section>
-        <section class="site-nav accordeon accordeon--nojs accordeon--closed">
+        <section class="site-nav accordeon accordeon--nojs">
           <div class="accordeon__wrapper">
             <h2>Разделы сайта</h2>
             <button class="accordeon__button" type="button" aria-label="Раскрыть список"></button>
           </div>
-          <ul class="accordeon__list">
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="#">О компании</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="accordeon__link" href="#">Продукты</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="accordeon__link" href="#">Производство печатных плат</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="accordeon__link" href="#">Монтаж печатных плат</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="accordeon__link" href="#">Комплектующие</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="accordeon__link" href="#">Доставка</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="accordeon__link" href="#">Контакты</a>
-            </li>
-          </ul>
+          <div class="site-nav__wrapper">
+            <ul class="accordeon__list">
+              <li class="site-nav__item">
+                <a class="site-nav__link" href="#">О компании</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="accordeon__link" href="#">Продукты</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="accordeon__link" href="#">Производство печатных плат</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="accordeon__link" href="#">Монтаж печатных плат</a>
+              </li>
+            </ul>
+            <ul class="accordeon__list">
+              <li class="site-nav__item">
+                <a class="accordeon__link" href="#">Комплектующие</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="accordeon__link" href="#">Доставка</a>
+              </li>
+              <li class="site-nav__item">
+                <a class="accordeon__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </div>
         </section>
         <section class="contacts accordeon accordeon--nojs">
           <div class="accordeon__wrapper">
@@ -243,13 +248,13 @@
       <form action="https://echo.htmlacademy.ru" method="post">
         <div class="callback-popup__name">
           <label for="name-popup" class="visually-hidden">Имя</label>
-          <input type="text" placeholder="Имя" name="user-name" id="name-popup" required>
+          <input type="text" placeholder="Имя" name="user-name-popup" id="name-popup" required>
         </div>
         <div class="callback-popup__phone">
           <label for="phone-popup" class="visually-hidden">Телефон</label>
-          <input id="phone-popup" type="tel" placeholder="Телефон" name="user-phone" maxlength="18" required>
+          <input id="phone-popup" type="tel" placeholder="Телефон" name="user-phone-popup" maxlength="18" required>
         </div>
-        <textarea placeholder="Ваш вопрос" name="user-question" id="question-popup"></textarea>
+        <textarea placeholder="Ваш вопрос" name="user-question-popup" id="question-popup"></textarea>
         <button type="submit" class="callback-popup__submit">Отправить</button>
         <div class="callback-popup__personal-data">
           <input type="checkbox" id="personal-data-popup" class="visually-hidden" checked required>
@@ -258,8 +263,6 @@
       </form>
       <button class="callback-popup__button-close" type="button" aria-label="Закрыть окно заказа обратного звонка"></button>
     </section>
-
-    <div class="overlay overlay--hidden"></div>
 
     <svg width="0" height="0" style="display:none">
       <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 17" id="icon-cross">

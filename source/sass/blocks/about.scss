@@ -139,9 +139,10 @@
   }
 
   .about .container {
-    padding-top: 36px;
+    max-width: 95%;
+    padding-top: 37px;
     padding-bottom: 65px;
-    padding-left: 4px;
+    padding-left: 6px;
 
     &::before {
       display: none;

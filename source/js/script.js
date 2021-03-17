@@ -11,6 +11,8 @@ const callbackAgreement = callbackPopup.querySelector('#personal-data-popup');
 const callbackNameInput = callbackPopup.querySelector('#name-popup');
 const callbackPhoneInput = callbackPopup.querySelector('#phone-popup');
 const callbackQuestionInput = callbackPopup.querySelector('#question-popup');
+const pageBody = document.querySelector('.page-body');
+const phoneLength = 18;
 
 const anchors = document.querySelectorAll('a[href*="#"]');
 
@@ -92,17 +94,18 @@ if (accordeonBlocks) {
 
   accordeonBlocks.forEach((block) => {
     block.classList.remove('accordeon--nojs');
+    block.classList.add('accordeon--closed');
 
-    if (!block.classList.contains('accordeon--closed')) {
-      activePanel = block;
-    }
+    block.addEventListener('click', function() {
+      if (!block.classList.contains('accordeon--closed')) {
+        activePanel = block;
+      }
 
-    const toggleButton = block.querySelector('.accordeon button');
-
-    toggleButton.addEventListener('click', function() {
       if (block.classList.contains('accordeon--closed')) {
+        if (activePanel) {
+          activePanel.classList.add('accordeon--closed');
+        }
         block.classList.remove('accordeon--closed');
-        activePanel.classList.add('accordeon--closed');
         activePanel = block;
       } else {
         block.classList.add('accordeon--closed');
@@ -111,17 +114,57 @@ if (accordeonBlocks) {
   });
 }
 
+/* Validation */
+
+const validatePhone = (phoneInput) => {
+  if (phoneInput.validity.valueMissing) {
+    phoneInput.setCustomValidity(`Обязательное поле`);
+  } else {
+    phoneInput.setCustomValidity(``);
+  }
+
+  phoneInput.addEventListener(`input`, function () {
+    let valueLength = phoneInput.value.length;
+
+    if (valueLength < phoneLength) {
+      phoneInput.setCustomValidity(`неверный формат`);
+    } else {
+      phoneInput.setCustomValidity(``);
+    }
+  });
+};
+
+const validateName = (nameInput) => {
+  if (nameInput.validity.valueMissing) {
+    nameInput.setCustomValidity(`Обязательное поле`);
+  } else {
+    nameInput.setCustomValidity(``);
+  }
+
+  nameInput.addEventListener(`input`, function () {
+    let valueLength = nameInput.value.length;
+
+    if (valueLength < 1) {
+      nameInput.setCustomValidity(`Input your name`);
+    } else {
+      nameInput.setCustomValidity(``);
+    }
+  });
+};
+
 /* CallBack Form */
 
 if (callbackButton) {
   let closePopup = () => {
     overlay.classList.add('overlay--hidden');
     callbackPopup.classList.remove('pop-up--show');
+    pageBody.classList.remove('page-body--special');
   };
 
   let showPopup = () => {
     overlay.classList.remove('overlay--hidden');
     callbackPopup.classList.add('pop-up--show');
+    pageBody.classList.add('page-body--special');
     callbackNameInput.focus();
   };
 
@@ -145,8 +188,12 @@ if (callbackButton) {
   });
 
   if (callbackSendButton) {
+    validatePhone(callbackPhoneInput);
+    validateName(callbackNameInput);
     callbackSendButton.addEventListener('click', function (evt) {
-      if (callbackAgreement.checked) {
+      if (callbackPhoneInput.value.length !== phoneLength && callbackNameInput.value.valueMissing) {
+        evt.preventDefault();
+      } else if (callbackAgreement.checked && (callbackNameInput.value !== "") && (callbackPhoneInput.value.length === phoneLength)) {
         evt.preventDefault();
         localStorage.setItem('callbackUserName', callbackNameInput.value);
         localStorage.setItem('callbackPhoneNumber', callbackPhoneInput.value);
@@ -160,8 +207,12 @@ if (callbackButton) {
 /*Feedback Form*/
 
 if (feedbackForm) {
+  validatePhone(feedbackFormPhoneInput);
+  validateName(feedbackFormNameInput);
   feedbackFormSendButton.addEventListener('click', function (evt) {
-    if (feedbackFormAgreement.checked) {
+    if (feedbackFormPhoneInput.value.length !== phoneLength && feedbackFormNameInput.value.valueMissing) {
+      evt.preventDefault();
+    } else if (feedbackFormAgreement.checked && (feedbackFormNameInput.value !== "") && (feedbackFormPhoneInput.value.length === phoneLength)) {
       evt.preventDefault();
       localStorage.setItem('feedbackUserName', feedbackFormNameInput.value);
       localStorage.setItem('feedbackPhoneNumber', feedbackFormPhoneInput.value);

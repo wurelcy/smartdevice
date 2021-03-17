@@ -2,10 +2,17 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 52px;
+  margin-top: 54px;
   display: flex;
-  justify-content: space-between;
-  max-width: 112px;
+  flex-wrap: wrap;
+}
+
+.social-list__item {
+  margin-right: 16px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .social-list__link {
@@ -30,6 +37,9 @@
 @media (max-width: $tablet-width) {
   .social-list {
     margin: 0;
-    width: 112px;
+  }
+
+  .social-list__item {
+    margin-right: 15px;
   }
 }

@@ -1,20 +1,17 @@
 .site-nav {
-  margin-right: 142px;
-  min-height: 143px;
+  margin: 0 auto;
 }
 
-.site-nav .accordeon__list {
-  max-width: 516px;
-}
-
-.site-nav__item {
-  margin-right: 74px;
+.site-nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-width: 426px;
 }
 
 @media (max-width: $tablet-width) {
   .site-nav {
     position: relative;
-    margin-right: 0;
+    margin: 0;
   }
 
   .site-nav h2 {
@@ -22,18 +19,13 @@
     margin-bottom: 25px;
   }
 
+  .site-nav__wrapper {
+    display: flex;
+    flex-direction: column;
+    min-width: 243px;
+  }
+
   .site-nav .accordeon__list {
-    max-height: 100%;
     margin-right: 0;
-  }
-
-  .site-nav__item {
-    margin-right: 0;
-  }
-}
-
-@media (max-width: $mobile-width-only) {
-  .site-nav {
-    min-height: auto;
   }
 }

@@ -9,18 +9,15 @@
 }
 
 .accordeon__list {
+  display: flex;
+  flex-direction: column;
   font-family: $ptmono;
   list-style: none;
   padding: 0;
   margin: 0;
   font-size: 15px;
   line-height: 25px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: space-between;
   color: rgba($darkest, 0.5);
-  max-height: 100px;
 }
 
 .accordeon__button {
@@ -41,6 +38,8 @@
 @media (max-width: $mobile-width-only) {
   .accordeon {
     position: relative;
+    flex-grow: 1;
+    flex-basis: 100%;
 
     &::after {
       content: "";
@@ -48,14 +47,14 @@
       min-width: 768px;
       height: 1px;
       background-color: rgba($border, 0.2);
-      left: -50%;
+      left: -20px;
       bottom: 0;
     }
   }
 
   .accordeon h2 {
-    margin: 27px 0;
-    margin-left: 5px;
+    margin: 30px 0;
+    margin-left: 3px;
   }
 
   .accordeon__wrapper {
@@ -68,6 +67,8 @@
   .accordeon__button {
     display: block;
     outline: none;
+    margin-top: 3px;
+    margin-right: 5px;
     border: 0;
     width: 17px;
     height: 17px;

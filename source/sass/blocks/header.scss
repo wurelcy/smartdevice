@@ -13,6 +13,14 @@
   }
 }
 
+.header--modal {
+  min-height: 100vh;
+}
+
+.header--modal .header__wrapper {
+  padding-bottom: 150px;
+}
+
 .header__wrapper {
   display: flex;
   justify-content: space-between;
@@ -30,7 +38,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 658px;
+  flex-wrap: wrap;
+  max-width: 658px;
   margin-right: 5px;
 }
 
@@ -41,8 +50,8 @@
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  background: transparent;
   padding: 14px;
+  display: block;
   min-width: 180px;
   color: $white;
   border: 1px solid $white;
@@ -63,10 +72,15 @@
   }
 }
 
-.header__contact {
+.header__contact span {
   font-family: $ptmono;
   font-size: 16px;
   line-height: 18px;
+}
+
+.header__contact {
+  z-index: 10;
+  margin-right: 8px;
 
   &:focus,
   &:hover {
@@ -79,13 +93,26 @@
 }
 
 .header__contact svg {
-  margin-right: 11px;
+  margin-right: 16px;
+}
+
+.header__phone-wrapper {
+  display: flex;
+  align-items: center;
+  margin-left: 83px;
+  z-index: 10;
 }
 
 .header__phone-wrapper svg {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 6px;
+  margin-right: 11px;
+}
+
+@media (max-width: 1420px) {
+  .header .container {
+    max-width: 90%;
+  }
 }
 
 @media (max-width: $tablet-width) {
@@ -93,8 +120,16 @@
     padding-top: 0;
   }
 
+  .header .container {
+    max-width: 94%;
+  }
+
   .header__wrapper {
     padding-bottom: 116px;
+  }
+
+  .header__phone-wrapper {
+    margin: 0;
   }
 
   .header__call-button {
@@ -111,13 +146,13 @@
     }
   }
 
-  .header__contacts svg {
+  .header__contact svg {
     width: 24px;
     height: 24px;
     margin-right: 0;
   }
 
-  .header__contacts span {
+  .header__contact span {
     display: none;
   }
 }
@@ -131,7 +166,7 @@
   .header__phone-wrapper svg {
     display: inline-block;
     vertical-align: baseline;
-    margin-right: 5px;
+    margin-right: 0;
   }
 
   .header__wrapper {

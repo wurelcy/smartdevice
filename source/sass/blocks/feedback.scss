@@ -64,6 +64,7 @@
   min-height: 154px;
   margin-bottom: 44px;
   border: 0;
+  border-radius: 0;
   background-color: rgba($white, 0.1);
   padding-left: 16px;
   padding-top: 13px;
@@ -72,7 +73,8 @@
   resize: none;
   outline: none;
 
-  &:focus {
+  &:focus,
+  &:hover {
     border: 1px solid $white;
   }
 
@@ -94,7 +96,7 @@
     width: 511px;
     height: 288px;
     top: 70px;
-    left: -25px;
+    right: 58%;
     background-image: url("../img/paper-airplane@1x.png");
     background-repeat: no-repeat;
     z-index: 1;
@@ -128,6 +130,7 @@
   height: 50px;
   min-width: 270px;
   border: 0;
+  border-radius: 0;
   background-color: rgba($white, 0.1);
   padding: 13px;
   padding-left: 17px;
@@ -136,7 +139,8 @@
   font-family: $ptmono;
   outline: none;
 
-  &:focus {
+  &:focus,
+  &:hover  {
     border: 1px solid $white;
   }
 
@@ -190,6 +194,14 @@
 }
 
 .feedback__button-block input {
+  position: relative;
+
+  &:invalid:required {
+    position: absolute;
+    right: 250px;
+    bottom: 22px;
+  }
+
   & + label::before {
     position: absolute;
     content: "";
@@ -232,10 +244,25 @@
   }
 }
 
+@media (max-width: 1185px) {
+  .feedback .container {
+    max-width: 1000px;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .feedback {
     padding-top: 78px;
     padding-bottom: 103px;
+  }
+
+  .feedback .container {
+    max-width: 750px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
   }
 
   .feedback p {
@@ -263,15 +290,6 @@
     padding-left: 17px;
   }
 
-  .feedback .container {
-    max-width: 750px;
-
-    &::before,
-    &::after {
-      display: none;
-    }
-  }
-
   .feedback__wrapper {
     margin-right: auto;
     max-width: 595px;
@@ -282,6 +300,10 @@
   }
 
   .feedback__button-block input {
+    &:invalid:required {
+      right: 260px;
+    }
+
     & + label::before {
       left: -33px;
     }
@@ -359,6 +381,11 @@
   }
 
   .feedback__button-block input {
+    &:invalid:required {
+      left: 10px;
+      bottom: 15px;
+    }
+
     & + label::before {
       left: -34px;
     }
