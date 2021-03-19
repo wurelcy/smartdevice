@@ -16,7 +16,6 @@
 
 .services .container {
   max-width: 1170px;
-  //max-width: 1020px;
 }
 
 .services__list {
@@ -99,7 +98,7 @@
   }
 }
 
-@media (max-width: 1175px) {
+@media (max-width: 1200px) {
   .services .container {
     max-width: 1020px;
   }

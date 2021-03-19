@@ -36,7 +36,6 @@
 
 .header__contacts {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   max-width: 658px;
@@ -109,7 +108,7 @@
   margin-right: 11px;
 }
 
-@media (max-width: 1420px) {
+@media (max-width: 1430px) {
   .header .container {
     max-width: 90%;
   }

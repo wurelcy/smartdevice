@@ -209,6 +209,12 @@ if (callbackButton) {
 
 /*Feedback Form*/
 
+let resetForm = () => {
+  feedbackFormPhoneInput.value = '';
+  feedbackFormNameInput.value = '';
+  feedbackFormQuestionInput.value = '';
+};
+
 if (feedbackForm) {
   validatePhone(feedbackFormPhoneInput);
   validateName(feedbackFormNameInput);
@@ -220,6 +226,7 @@ if (feedbackForm) {
       localStorage.setItem('feedbackUserName', feedbackFormNameInput.value);
       localStorage.setItem('feedbackPhoneNumber', feedbackFormPhoneInput.value);
       localStorage.setItem('feedbackQuestion', feedbackFormQuestionInput.value);
+      resetForm();
     }
   });
 }

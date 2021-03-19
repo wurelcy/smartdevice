@@ -8,6 +8,13 @@
   min-width: 426px;
 }
 
+@media (max-width: 1065px) {
+  .site-nav__wrapper {
+    flex-direction: column;
+    min-width: 243px;
+  }
+}
+
 @media (max-width: $tablet-width) {
   .site-nav {
     position: relative;
@@ -17,12 +24,6 @@
   .site-nav h2 {
     margin-left: 2px;
     margin-bottom: 25px;
-  }
-
-  .site-nav__wrapper {
-    display: flex;
-    flex-direction: column;
-    min-width: 243px;
   }
 
   .site-nav .accordeon__list {
