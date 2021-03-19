@@ -15,6 +15,9 @@ const pageBody = document.querySelector('.page-body');
 const phoneLength = 18;
 
 const anchors = document.querySelectorAll('a[href*="#"]');
+const wrongFormat = 'Неверный формат';
+const requiredField = 'Обязательное поле';
+const nameFieldMessage = 'Введите Ваше имя';
 
 const feedbackForm = document.querySelector('.feedback');
 const feedbackFormSendButton = feedbackForm.querySelector('.feedback__submit');
@@ -118,7 +121,7 @@ if (accordeonBlocks) {
 
 const validatePhone = (phoneInput) => {
   if (phoneInput.validity.valueMissing) {
-    phoneInput.setCustomValidity(`Обязательное поле`);
+    phoneInput.setCustomValidity(requiredField);
   } else {
     phoneInput.setCustomValidity(``);
   }
@@ -127,7 +130,7 @@ const validatePhone = (phoneInput) => {
     let valueLength = phoneInput.value.length;
 
     if (valueLength < phoneLength) {
-      phoneInput.setCustomValidity(`неверный формат`);
+      phoneInput.setCustomValidity(wrongFormat);
     } else {
       phoneInput.setCustomValidity(``);
     }
@@ -136,7 +139,7 @@ const validatePhone = (phoneInput) => {
 
 const validateName = (nameInput) => {
   if (nameInput.validity.valueMissing) {
-    nameInput.setCustomValidity(`Обязательное поле`);
+    nameInput.setCustomValidity(requiredField);
   } else {
     nameInput.setCustomValidity(``);
   }
@@ -145,7 +148,7 @@ const validateName = (nameInput) => {
     let valueLength = nameInput.value.length;
 
     if (valueLength < 1) {
-      nameInput.setCustomValidity(`Input your name`);
+      nameInput.setCustomValidity(nameFieldMessage);
     } else {
       nameInput.setCustomValidity(``);
     }
