@@ -799,7 +799,7 @@ a {
   color: #666666;
   max-width: 482px; }
 
-@media (max-width: 1170px) {
+@media (max-width: 1200px) {
   .advantages__item {
     margin-left: 10px;
     margin-right: 10px; }
